@@ -46,16 +46,13 @@ public struct PlayerState
     /// True: intends on using ability 2
     /// </summary>
     public bool ability2;
-
-    public enum Form
-    {
-        ANTHRO,
-        FERAL,
-    }
-    public Form form;
+    /// <summary>
+    /// The form index
+    /// </summary>
+    public int formIndex;
 
     public override string ToString()
     {
-        return $"move: {moveDirection}, running: {running}, jumping: {jumping}, grounded: {grounded}, form: {form}";
+        return $"move: {moveDirection}, running: {running}, jumping: {jumping}, grounded: {grounded}, form: {formIndex}";
     }
 }

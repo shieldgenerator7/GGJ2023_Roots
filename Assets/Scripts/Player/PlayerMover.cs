@@ -4,8 +4,7 @@ using UnityEngine;
 
 public class PlayerMover : MonoBehaviour
 {
-    public PlayerAttributes attributesAnthro;
-    public PlayerAttributes attributesFeral;
+    public List<PlayerAttributes> attributesList;
 
     private PlayerAttributes attributes;
     private Rigidbody2D rb2d;
@@ -21,14 +20,7 @@ public class PlayerMover : MonoBehaviour
         //Transform
         if (playerState.grounded)
         {
-            if (playerState.form == PlayerState.Form.ANTHRO)
-            {
-                attributes = attributesAnthro;
-            }
-            if (playerState.form == PlayerState.Form.FERAL)
-            {
-                attributes = attributesFeral;
-            }
+            attributes = attributesList[playerState.formIndex];
         }
         //Movement
         Vector2 vel = rb2d.velocity;

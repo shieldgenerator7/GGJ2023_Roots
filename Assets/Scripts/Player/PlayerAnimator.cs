@@ -23,7 +23,7 @@ public class PlayerAnimator : MonoBehaviour
     // Update is called once per frame
     void UpdateAnimator(PlayerState playerState)
     {
-        bool feral = playerState.form == PlayerState.Form.FERAL;
+        bool feral = playerState.formIndex == 1;
         bool moving = playerState.moveDirection != 0;
         //Anthro/Feral form
         animator.SetBool("feral", feral);

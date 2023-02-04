@@ -21,9 +21,9 @@ public class PlayerInput : MonoBehaviour
         //Interact
         inputState.interact = Input.GetButton("Interact");
         //Ability1
-        inputState.ability1 = Input.GetButton("Ability1");
+        inputState.ability1 = false;// Input.GetButton("Ability1");
         //Ability2
-        inputState.ability2 = Input.GetButton("Ability2");
+        inputState.ability2 = false;// Input.GetButton("Ability2");
         //Look Direction
         Vector2 prevLookDirection = inputState.lookDirection;
         Vector3 mousePos = Input.mousePosition;

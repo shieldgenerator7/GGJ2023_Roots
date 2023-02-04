@@ -65,11 +65,11 @@ public class PlayerController : MonoBehaviour
         {
             if (inputState.movementDirection.y < 0)
             {
-                playerState.form = PlayerState.Form.FERAL;
+                playerState.formIndex = 1;
             }
             if (inputState.movementDirection.y > 0)
             {
-                playerState.form = PlayerState.Form.ANTHRO;
+                playerState.formIndex = 0;
             }
         }
         //Ability
