@@ -20,7 +20,7 @@ public class TreeController : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         var movespeed = speed;
         if (TreeTracker.Instance.isWaveActive)
