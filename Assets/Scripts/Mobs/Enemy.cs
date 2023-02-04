@@ -10,6 +10,12 @@ public class Enemy : MonoBehaviour
 {
 
     private Rigidbody2D rb;
+    public float speed = 5f;
+
+    private void Awake()
+    {
+        TreeTracker.Instance.RegisterMob(gameObject);
+    }
 
     private void Start()
     {
@@ -19,7 +25,22 @@ public class Enemy : MonoBehaviour
 
     private void FixedUpdate()
     {
-        rb.velocity = new Vector3(-5f, 0f, 0f);
+        if (TreeTracker.Instance != null)
+        {
+            if (transform.position.x < TreeTracker.Instance.TreeLocation.position.x)
+            {
+                rb.velocity = new Vector3(speed, 0f, 0f);
+            }
+            else
+            {
+                rb.velocity = new Vector3(speed * -1, 0f, 0f);
+            }
+        }
+        else
+        {
+            rb.velocity = new Vector3(speed * -1, 0f, 0f);
+        }
+
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -34,5 +55,8 @@ public class Enemy : MonoBehaviour
     private void OnDestroy()
     {
         //spawn effect
+        TreeTracker.Instance.DeregisterMob(gameObject);
     }
+
+
 }

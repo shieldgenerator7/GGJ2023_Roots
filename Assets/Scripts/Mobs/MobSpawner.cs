@@ -42,7 +42,7 @@ public class MobSpawner : MonoBehaviour
         waveAnnouce.SetText(wave.WaveAnnouncement);
         wave.Mobs.ForEach(x =>
         {
-            for (int i = 0; i <= x.Count; i++)
+            for (int i = 0; i < x.Count; i++)
             {
                 spawnQueue.Enqueue(x.Mob);
             }

@@ -14,7 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Mobs:
   - Mob: {fileID: 6133131661770203922, guid: 62da741c7cdffd94aaadb895a8ad813d, type: 3}
-    Count: 4
-  - Mob: {fileID: 6133131661770203922, guid: 62da741c7cdffd94aaadb895a8ad813d, type: 3}
-    Count: 2
+    Count: 1
   WaveAnnouncement: WAVE 1!
