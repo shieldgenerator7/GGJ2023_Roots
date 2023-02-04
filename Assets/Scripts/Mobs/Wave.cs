@@ -8,6 +8,7 @@ using UnityEngine;
 public class Wave : ScriptableObject
 {
     public List<MobGroup> Mobs = new List<MobGroup>();
+    public string WaveAnnouncement = "WAVE";
 
 }
 
