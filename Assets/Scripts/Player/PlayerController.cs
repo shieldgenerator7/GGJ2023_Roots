@@ -6,6 +6,7 @@ public class PlayerController : MonoBehaviour
 {
     public float coyoteTime = 0.1f;
     public float bounceWindow = 0.1f;
+    public List<int> groundLayerIndices;
     public Transform bottom;
 
     [SerializeField]
@@ -14,6 +15,7 @@ public class PlayerController : MonoBehaviour
     public event OnPlayerStateChanged onPlayerStateChanged;
 
     private Rigidbody2D rb2d;
+    private Rigidbody2D ridingRB2D;
 
     public void Start()
     {
@@ -27,6 +29,19 @@ public class PlayerController : MonoBehaviour
             playerState.jumping = false;
             playerState.falling = !playerState.grounded;
             onPlayerStateChanged?.Invoke(playerState);
+        }
+        if (ridingRB2D)
+        {
+            playerState.influenceMovement = ridingRB2D.velocity.x;
+            onPlayerStateChanged?.Invoke(playerState);
+        }
+        else
+        {
+            if (playerState.influenceMovement != 0)
+            {
+                playerState.influenceMovement = 0;
+                onPlayerStateChanged?.Invoke(playerState);
+            }
         }
     }
 
@@ -103,6 +118,10 @@ public class PlayerController : MonoBehaviour
             {
                 playerState.lastFallVelocity = collision.relativeVelocity.y;
             }
+            if (groundLayerIndices.Contains( collision.collider.gameObject.layer))
+            {
+                ride(collision.collider.gameObject);
+            }
         }
     }
     private void OnCollisionStay2D(Collision2D collision)
@@ -110,6 +129,10 @@ public class PlayerController : MonoBehaviour
         if (collision.contacts.Length > 0 && collision.contacts[0].point.y <= bottom.position.y)
         {
             setGrounded(true);
+            if (groundLayerIndices.Contains(collision.collider.gameObject.layer))
+            {
+                ride(collision.collider.gameObject);
+            }
         }
     }
     private void OnCollisionExit2D(Collision2D collision)
@@ -117,6 +140,7 @@ public class PlayerController : MonoBehaviour
         if (collision.contacts.Length == 0 || collision.contacts[0].point.y < bottom.position.y)
         {
             setGrounded(false);
+            ride(null);
         }
     }
 
@@ -142,6 +166,24 @@ public class PlayerController : MonoBehaviour
             }
             playerState.grounded = false;
             onPlayerStateChanged?.Invoke(playerState);
+        }
+    }
+
+    private void ride(GameObject go)
+    {
+        if (!go)
+        {
+            ridingRB2D = null;
+            return;
+        }
+        ridingRB2D = go.GetComponent<Rigidbody2D>();
+        if (!ridingRB2D)
+        {
+            ridingRB2D = go.GetComponentInParent<Rigidbody2D>();
+        }
+        if (!ridingRB2D)
+        {
+            ridingRB2D = go.GetComponentInChildren<Rigidbody2D>();
         }
     }
 }
