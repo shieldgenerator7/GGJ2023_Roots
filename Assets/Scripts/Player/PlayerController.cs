@@ -5,6 +5,7 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     public float coyoteTime = 0.1f;
+    public Transform bottom;
 
     private PlayerState playerState;
     public delegate void OnPlayerStateChanged(PlayerState playerState);
@@ -37,15 +38,17 @@ public class PlayerController : MonoBehaviour
         //Jumping
         if (playerState.jumping != inputState.jump)
         {
-            if (!playerState.jumping && inputState.jump
-                && (playerState.grounded || Time.time <= playerState.lastGroundTime + coyoteTime)
-                && !playerState.jumpConsumed
-                )
+            if (!playerState.jumping && inputState.jump)
             {
-                playerState.jumping = true;
-                playerState.jumpConsumed = true;
-                playerState.falling = false;
-                //playerState.grounded = true;
+                if ((playerState.grounded || Time.time <= playerState.lastGroundTime + coyoteTime)
+                    && !playerState.jumpConsumed
+                )
+                {
+                    playerState.jumping = true;
+                    playerState.jumpConsumed = true;
+                    playerState.falling = false;
+                    //playerState.grounded = true;
+                }
             }
             else if (playerState.jumping && !inputState.jump)
             {
@@ -83,7 +86,7 @@ public class PlayerController : MonoBehaviour
     ///TODO: move to some other script, perhaps the environment state updater one
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.contacts.Length > 0 && collision.contacts[0].point.y < transform.position.y)
+        if (collision.contacts.Length > 0 && collision.contacts[0].point.y <= bottom.position.y)
         {
             playerState.grounded = true;
             playerState.lastGroundTime = Time.time;
@@ -92,7 +95,7 @@ public class PlayerController : MonoBehaviour
     }
     private void OnCollisionExit2D(Collision2D collision)
     {
-        if (collision.contacts.Length == 0 || collision.contacts[0].point.y < transform.position.y)
+        if (collision.contacts.Length == 0 || collision.contacts[0].point.y < bottom.position.y)
         {
             playerState.grounded = false;
             playerState.lastGroundTime = Time.time;
