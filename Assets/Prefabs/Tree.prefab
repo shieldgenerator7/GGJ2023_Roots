@@ -75,6 +75,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 1
+  redirectLayerId: 6
 --- !u!1 &6004188132608323997
 GameObject:
   m_ObjectHideFlags: 0

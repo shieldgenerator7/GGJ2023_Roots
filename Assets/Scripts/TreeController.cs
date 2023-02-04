@@ -6,6 +6,8 @@ public class TreeController : MonoBehaviour
 {
     public float speed = 1;
 
+    public int redirectLayerId = 0;
+
     private Vector2 direction = Vector2.right;
 
     private Rigidbody2D rb2d;
@@ -22,6 +24,14 @@ public class TreeController : MonoBehaviour
         if (rb2d.velocity.magnitude < speed)
         {
             rb2d.velocity += direction * speed;
+        }
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.collider.gameObject.layer == redirectLayerId)
+        {
+            direction = Vector2.up;
         }
     }
 }
