@@ -10,8 +10,6 @@ public class TreeController : MonoBehaviour
 
     private float distance = 0;
 
-    private Vector2 direction = Vector2.right;
-
     // Start is called before the first frame update
     void Start()
     {
