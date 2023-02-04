@@ -28,7 +28,16 @@ public class TreeController : MonoBehaviour
 
     void updatePosition()
     {
-        Vector2 dir = track.getPosition(distance) - (Vector2)transform.position;
-        rb2d.velocity = dir.normalized * speed;
+        Vector2 targetPos = track.getPosition(distance);
+        if (distance >= track.Length)
+        {
+            transform.position = targetPos;
+            rb2d.velocity = Vector2.zero;
+        }
+        else
+        {
+            Vector2 dir = track.getPosition(distance) - (Vector2)transform.position;
+            rb2d.velocity = dir.normalized * speed;
+        }
     }
 }
