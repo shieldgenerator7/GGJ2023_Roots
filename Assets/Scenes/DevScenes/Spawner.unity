@@ -377,6 +377,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2479482028105298423, guid: 7d34f8cf9a50a1f45a7c0120b552ea70, type: 3}
+      propertyPath: follow
+      value: 
+      objectReference: {fileID: 537664797}
     - target: {fileID: 5385257659384942833, guid: 7d34f8cf9a50a1f45a7c0120b552ea70, type: 3}
       propertyPath: m_Name
       value: Main Camera
@@ -923,6 +927,10 @@ PrefabInstance:
       propertyPath: m_TagString
       value: tree
       objectReference: {fileID: 0}
+    - target: {fileID: 8561115757649941337, guid: c97a7d844c011534c942d9d0ef692ccb, type: 3}
+      propertyPath: track
+      value: 
+      objectReference: {fileID: 1469770568}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
