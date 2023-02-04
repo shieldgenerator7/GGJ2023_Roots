@@ -1,12 +1,16 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class MobSpawner : MonoBehaviour
 {
 
     [SerializeField]
     private GameObject m_Mob;
+
+    [SerializeField]
+    private AnnounceWave waveAnnouce;
 
     private float lastSpawn = 0f;
     public float timeBetweenSpawns = 1f;
@@ -51,6 +55,7 @@ public class MobSpawner : MonoBehaviour
 
     public void QueueWave(Wave wave)
     {
+        waveAnnouce.SetText(wave.WaveAnnouncement);
         wave.Mobs.ForEach(x =>
         {
             for (int i = 0; i <= x.Count; i++)
