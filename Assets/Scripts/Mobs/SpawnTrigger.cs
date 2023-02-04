@@ -6,13 +6,14 @@ public class SpawnTrigger : MonoBehaviour
 {
 
     public Wave wave;
+    public MobSpawner mobSpawner;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if(collision.tag == "tree")
         {
-            MobSpawner.instance.QueueWave(wave);
-            Destroy(gameObject);
+            mobSpawner.QueueWave(wave);
+            gameObject.SetActive(false);
         }
     }
 

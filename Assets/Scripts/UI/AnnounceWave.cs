@@ -29,7 +29,6 @@ public class AnnounceWave : MonoBehaviour
             currentTime += Time.deltaTime;
             float alpha = Mathf.Lerp(startAlpha, endAlpha, currentTime / fadeIn);
             text.color = new Color(text.color.r, text.color.g, text.color.b, alpha);
-            Debug.Log($"Fading: {fading} Alpha: {alpha}");
 
             if (text.color.a == endAlpha)
             {
@@ -43,7 +42,6 @@ public class AnnounceWave : MonoBehaviour
             currentTime += Time.deltaTime;
             float alpha = Mathf.Lerp(endAlpha, startAlpha, currentTime / fadeOut);
             
-            Debug.Log($"Fading: {fading} Alpha: {alpha}");
             text.color = new Color(text.color.r, text.color.g, text.color.b, alpha);
 
 
@@ -52,7 +50,7 @@ public class AnnounceWave : MonoBehaviour
 
     public void SetText(string value)
     {
-        text.text = value;
+            text.text = value;
         currentTime = 0f;
         fading = true;
     }

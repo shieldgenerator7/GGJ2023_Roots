@@ -17,22 +17,6 @@ public class MobSpawner : MonoBehaviour
 
     private Queue<GameObject> spawnQueue = new Queue<GameObject>();
 
-    public static MobSpawner instance;
-    // Start is called before the first frame update
-
-
-    private void Awake()
-    {
-        if(instance == null)
-        {
-            instance = this;
-        }
-        else
-        {
-            Destroy(this);
-        }
-        DontDestroyOnLoad(this);
-    }
 
     void Start()
     {

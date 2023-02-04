@@ -20,6 +20,11 @@ public class TreeGameObject : MonoBehaviour
         treeHealth.onHealthChanged += updateLeaves;
     }
 
+    public void TakeDamage(int damage)
+    {
+        treeHealth.Health -= damage;
+    }
+
     //// Update is called once per frame
     //void Update()
     //{
