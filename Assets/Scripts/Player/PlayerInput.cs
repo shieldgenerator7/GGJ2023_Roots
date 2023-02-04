@@ -11,6 +11,8 @@ public class PlayerInput : MonoBehaviour
 
     private void Update()
     {
+        InputState prevInputState = inputState;
+        prevInputState.movementDirection = inputState.movementDirection;
         //Movement
         inputState.movementDirection.x = Input.GetAxis("Horizontal");
         inputState.movementDirection.y = Input.GetAxis("Vertical");
@@ -31,7 +33,7 @@ public class PlayerInput : MonoBehaviour
         inputState.lookDirection = (lookPosition - (Vector2)center.position).normalized;
         
         //Check input changed
-        checkInputChanged(inputState);
+        checkInputChanged(prevInputState);
     }
 
     private void checkInputChanged(InputState newInputState)

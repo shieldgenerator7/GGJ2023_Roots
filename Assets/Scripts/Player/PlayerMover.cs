@@ -18,7 +18,7 @@ public class PlayerMover : MonoBehaviour
     public void processPlayerState(PlayerState playerState)
     {
         //Transform
-        if (playerState.grounded)
+        if (playerState.grounded || !attributes)
         {
             attributes = attributesList[playerState.formIndex];
         }
