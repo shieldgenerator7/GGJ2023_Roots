@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1904021390416213658}
   - component: {fileID: 2386945949090215557}
-  - component: {fileID: 3635796938782244823}
+  - component: {fileID: 2501182037007936713}
   m_Layer: 7
   m_Name: Tree
   m_TagString: Untagged
@@ -62,7 +62,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 1
   m_Constraints: 4
---- !u!114 &3635796938782244823
+--- !u!114 &2501182037007936713
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
