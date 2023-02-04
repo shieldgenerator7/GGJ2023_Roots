@@ -65,11 +65,15 @@ public class PlayerController : MonoBehaviour
                 {
                     if (standingColl2D?.GetComponent<PlatformEffector2D>())
                     {
-                        GetComponent<Collider2D>().isTrigger = true;
-                        rb2d.velocity = Vector2.down;
-                        if (fallThroughTime == 0)
+                        if (!playerState.jumpConsumed)
                         {
-                            fallThroughTime = Time.time;
+                            GetComponent<Collider2D>().isTrigger = true;
+                            rb2d.velocity = Vector2.down;
+                            if (fallThroughTime == 0)
+                            {
+                                fallThroughTime = Time.time;
+                            }
+                            playerState.jumpConsumed = true;
                         }
                     }
                     else
