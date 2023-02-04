@@ -11,6 +11,8 @@ public class Enemy : MonoBehaviour
 
     private Rigidbody2D rb;
     public float speed = 5f;
+    public GameObject deathEffect;
+    public int strength;
 
     private void Awake()
     {
@@ -49,14 +51,24 @@ public class Enemy : MonoBehaviour
         {
             Debug.Log("hit him!");
             Destroy(gameObject);
+            collision.gameObject.GetComponent<TreeGameObject>().Damage(strength);
         }
     }
 
     private void OnDestroy()
     {
         //spawn effect
+        if (deathEffect != null)
+        {
+            var splat = Instantiate(deathEffect, gameObject.transform.parent);
+            splat.transform.position = transform.position;
+        }
         TreeTracker.Instance.DeregisterMob(gameObject);
     }
 
+    public void KillMe()
+    {
+        Destroy(gameObject);
+    }
 
 }

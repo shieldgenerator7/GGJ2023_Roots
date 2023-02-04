@@ -20,7 +20,7 @@ public class TreeGameObject : MonoBehaviour
         treeHealth.onHealthChanged += updateLeaves;
     }
 
-    public void TakeDamage(int damage)
+    public void Damage(int damage)
     {
         treeHealth.Health -= damage;
     }
