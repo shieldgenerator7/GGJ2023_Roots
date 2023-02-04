@@ -17,4 +17,29 @@ public struct InputState
     {
         return $"move: {movementDirection}, jump: {jump}, run: {run},";
     }
+
+    public static bool operator ==(InputState is1, InputState is2)
+    {
+        return is1.movementDirection == is2.movementDirection
+            && is1.lookPosition == is2.lookPosition
+            && is1.lookDirection == is2.lookDirection
+            && is1.jump == is2.jump
+            && is1.run == is2.run
+            && is1.interact == is2.interact
+            && is1.ability1 == is2.ability1
+            && is1.ability2 == is2.ability2
+            ;
+    }
+    public static bool operator !=(InputState is1, InputState is2)
+    {
+        return !(is1 == is2);
+    }
+    public override bool Equals(object obj)
+    {
+        return obj is InputState && this == (InputState)obj;
+    }
+    public override int GetHashCode()
+    {
+        return base.GetHashCode();
+    }
 }
