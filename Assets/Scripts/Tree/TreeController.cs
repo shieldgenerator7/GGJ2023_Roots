@@ -22,11 +22,16 @@ public class TreeController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        distance += speed * Time.deltaTime;
-        updatePosition();
+        var movespeed = speed;
+        if (TreeTracker.Instance.isWaveActive)
+        {
+            movespeed = speed * .1f;
+        }
+        distance += movespeed * Time.deltaTime;
+        updatePosition(movespeed);
     }
 
-    void updatePosition()
+    void updatePosition(float speed)
     {
         Vector2 targetPos = track.getPosition(distance);
         if (distance >= track.Length)
