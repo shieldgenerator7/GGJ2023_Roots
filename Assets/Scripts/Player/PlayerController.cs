@@ -94,6 +94,15 @@ public class PlayerController : MonoBehaviour
             onPlayerStateChanged?.Invoke(playerState);
         }
     }
+    private void OnCollisionStay2D(Collision2D collision)
+    {
+        if (collision.contacts.Length > 0 && collision.contacts[0].point.y <= bottom.position.y)
+        {
+            playerState.grounded = true;
+            playerState.lastGroundTime = Time.time;
+            onPlayerStateChanged?.Invoke(playerState);
+        }
+    }
     private void OnCollisionExit2D(Collision2D collision)
     {
         if (collision.contacts.Length == 0 || collision.contacts[0].point.y < bottom.position.y)
