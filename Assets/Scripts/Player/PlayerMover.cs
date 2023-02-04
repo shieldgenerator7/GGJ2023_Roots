@@ -41,6 +41,7 @@ public class PlayerMover : MonoBehaviour
                 vel.y = 0;
             }
         }
+        vel += playerState.influenceDirection;
         rb2d.velocity = vel;
     }
 }

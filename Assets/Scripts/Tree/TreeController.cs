@@ -10,10 +10,13 @@ public class TreeController : MonoBehaviour
 
     private float distance = 0;
 
+    private Rigidbody2D rb2d;
+
     // Start is called before the first frame update
     void Start()
     {
-        updatePosition();
+        rb2d = GetComponent<Rigidbody2D>();
+        transform.position = track.getPosition(distance);
     }
 
     // Update is called once per frame
@@ -25,6 +28,7 @@ public class TreeController : MonoBehaviour
 
     void updatePosition()
     {
-        transform.position = track.getPosition(distance);
+        Vector2 dir = track.getPosition(distance) - (Vector2)transform.position;
+        rb2d.velocity = dir.normalized * speed;
     }
 }

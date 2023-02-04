@@ -195,6 +195,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   coyoteTime: 0.1
+  bounceWindow: 0.1
+  groundLayerIndices: 0600000007000000
   bottom: {fileID: 2306693783991847015}
   playerState:
     moveDirection: 0
@@ -202,9 +204,12 @@ MonoBehaviour:
     running: 0
     jumping: 0
     jumpConsumed: 0
+    superJumping: 0
     falling: 0
     grounded: 0
     lastGroundTime: 0
+    lastAirTime: 0
+    lastFallVelocity: 0
     walled: 0
     cellinged: 0
     ability1: 0
