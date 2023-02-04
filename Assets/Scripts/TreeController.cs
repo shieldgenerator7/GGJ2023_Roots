@@ -19,6 +19,9 @@ public class TreeController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        rb2d.velocity = direction * speed;
+        if (rb2d.velocity.magnitude < speed)
+        {
+            rb2d.velocity += direction * speed;
+        }
     }
 }
