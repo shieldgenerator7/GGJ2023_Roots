@@ -665,6 +665,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   TreeLocation: {fileID: 1606245408}
+  Mobs: []
 --- !u!1001 &1393729917
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -773,6 +774,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tree
       objectReference: {fileID: 0}
+    - target: {fileID: 1805031974140388665, guid: c97a7d844c011534c942d9d0ef692ccb, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
     - target: {fileID: 1904021390416213658, guid: c97a7d844c011534c942d9d0ef692ccb, type: 3}
       propertyPath: m_RootOrder
       value: 6
@@ -816,6 +821,14 @@ PrefabInstance:
     - target: {fileID: 1904021390416213658, guid: c97a7d844c011534c942d9d0ef692ccb, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6052171214720196480, guid: c97a7d844c011534c942d9d0ef692ccb, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
+    - target: {fileID: 6940307251277614260, guid: c97a7d844c011534c942d9d0ef692ccb, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 8561115757649941337, guid: c97a7d844c011534c942d9d0ef692ccb, type: 3}
       propertyPath: track

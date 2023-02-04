@@ -35,7 +35,7 @@ Transform:
   - {fileID: 4627358506557659620}
   - {fileID: 8026697848306428323}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!50 &2386945949090215557
 Rigidbody2D:
@@ -195,7 +195,7 @@ GameObject:
   - component: {fileID: 8791656475136148817}
   m_Layer: 8
   m_Name: trunk
-  m_TagString: tree
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -492,7 +492,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5798360501921302742, guid: 937f5d37c8fc2164f92ac94d6eddf4c6, type: 3}
       propertyPath: m_TagString
-      value: tree
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 8823369544293838033, guid: 937f5d37c8fc2164f92ac94d6eddf4c6, type: 3}
       propertyPath: m_RootOrder
@@ -736,7 +736,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5798360501921302742, guid: 937f5d37c8fc2164f92ac94d6eddf4c6, type: 3}
       propertyPath: m_TagString
-      value: tree
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 8823369544293838033, guid: 937f5d37c8fc2164f92ac94d6eddf4c6, type: 3}
       propertyPath: m_RootOrder
