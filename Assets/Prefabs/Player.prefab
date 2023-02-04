@@ -196,6 +196,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   coyoteTime: 0.1
   bottom: {fileID: 2306693783991847015}
+  playerState:
+    moveDirection: 0
+    lookDirection: {x: 0, y: 0}
+    running: 0
+    jumping: 0
+    jumpConsumed: 0
+    falling: 0
+    grounded: 0
+    lastGroundTime: 0
+    walled: 0
+    cellinged: 0
+    ability1: 0
+    ability2: 0
+    formIndex: 0
 --- !u!114 &4330231387902035764
 MonoBehaviour:
   m_ObjectHideFlags: 0

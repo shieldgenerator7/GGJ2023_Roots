@@ -7,6 +7,7 @@ public class PlayerController : MonoBehaviour
     public float coyoteTime = 0.1f;
     public Transform bottom;
 
+    [SerializeField]
     private PlayerState playerState;
     public delegate void OnPlayerStateChanged(PlayerState playerState);
     public event OnPlayerStateChanged onPlayerStateChanged;
