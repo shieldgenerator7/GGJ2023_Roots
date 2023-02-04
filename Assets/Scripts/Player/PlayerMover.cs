@@ -29,6 +29,10 @@ public class PlayerMover : MonoBehaviour
         if (playerState.jumping && playerState.grounded)
         {
             vel.y = attributes.jumpForce;
+            if (playerState.superJumping)
+            {
+                vel.y += Mathf.Abs(playerState.lastFallVelocity);
+            }
         }
         else if (!playerState.jumping && !playerState.grounded)
         {

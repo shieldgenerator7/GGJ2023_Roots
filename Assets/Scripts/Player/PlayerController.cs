@@ -5,6 +5,7 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     public float coyoteTime = 0.1f;
+    public float bounceWindow = 0.1f;
     public Transform bottom;
 
     [SerializeField]
@@ -49,11 +50,18 @@ public class PlayerController : MonoBehaviour
                     playerState.jumpConsumed = true;
                     playerState.falling = false;
                     //playerState.grounded = true;
+                    if (Time.time <= playerState.lastAirTime + bounceWindow)
+                    {
+                        playerState.superJumping = true;
+                    }
+
                 }
             }
             else if (playerState.jumping && !inputState.jump)
             {
                 playerState.jumping = false;
+                playerState.superJumping = false;
+                playerState.lastFallVelocity = 0;
                 if (!playerState.grounded)
                 {
                     playerState.falling = true;
@@ -89,26 +97,50 @@ public class PlayerController : MonoBehaviour
     {
         if (collision.contacts.Length > 0 && collision.contacts[0].point.y <= bottom.position.y)
         {
-            playerState.grounded = true;
-            playerState.lastGroundTime = Time.time;
-            onPlayerStateChanged?.Invoke(playerState);
+            setGrounded(true);
+            //if the player just landed
+            if (collision.relativeVelocity.y > 0)
+            {
+                playerState.lastFallVelocity = collision.relativeVelocity.y;
+            }
         }
     }
     private void OnCollisionStay2D(Collision2D collision)
     {
         if (collision.contacts.Length > 0 && collision.contacts[0].point.y <= bottom.position.y)
         {
-            playerState.grounded = true;
-            playerState.lastGroundTime = Time.time;
-            onPlayerStateChanged?.Invoke(playerState);
+            setGrounded(true);
         }
     }
     private void OnCollisionExit2D(Collision2D collision)
     {
         if (collision.contacts.Length == 0 || collision.contacts[0].point.y < bottom.position.y)
         {
-            playerState.grounded = false;
+            setGrounded(false);
+        }
+    }
+
+    private void setGrounded(bool grounded)
+    {
+        if (grounded)
+        {
+            //if the player just landed
+            if (!playerState.grounded)
+            {
+                playerState.lastAirTime = Time.time;
+            }
+            playerState.grounded = true;
             playerState.lastGroundTime = Time.time;
+            onPlayerStateChanged?.Invoke(playerState);
+        }
+        else
+        {
+            //if the player just took off
+            if (playerState.grounded)
+            {
+                playerState.lastGroundTime = Time.time;
+            }
+            playerState.grounded = false;
             onPlayerStateChanged?.Invoke(playerState);
         }
     }

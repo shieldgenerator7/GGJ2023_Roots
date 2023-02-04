@@ -22,6 +22,7 @@ public struct PlayerState
     /// </summary>
     public bool jumping;
     public bool jumpConsumed;
+    public bool superJumping;
     /// <summary>
     /// True: in air and intends to be going down
     /// </summary>
@@ -31,6 +32,8 @@ public struct PlayerState
     /// </summary>
     public bool grounded;
     public float lastGroundTime;
+    public float lastAirTime;
+    public float lastFallVelocity;
     /// <summary>
     /// True: up against a wall
     /// </summary>
