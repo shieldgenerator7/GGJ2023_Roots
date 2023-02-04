@@ -196,10 +196,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   coyoteTime: 0.1
   bounceWindow: 0.1
+  fallThroughDuration: 0.1
   groundLayerIndices: 0600000007000000
   bottom: {fileID: 2306693783991847015}
   playerState:
     moveDirection: 0
+    influenceMovement: 0
     lookDirection: {x: 0, y: 0}
     running: 0
     jumping: 0

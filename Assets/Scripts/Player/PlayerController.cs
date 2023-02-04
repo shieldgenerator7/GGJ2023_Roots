@@ -6,6 +6,7 @@ public class PlayerController : MonoBehaviour
 {
     public float coyoteTime = 0.1f;
     public float bounceWindow = 0.1f;
+    public float fallThroughDuration = 0.1f;
     public List<int> groundLayerIndices;
     public Transform bottom;
 
@@ -16,6 +17,9 @@ public class PlayerController : MonoBehaviour
 
     private Rigidbody2D rb2d;
     private Rigidbody2D ridingRB2D;
+    private Collider2D standingColl2D;
+
+    private float fallThroughTime = 0;
 
     public void Start()
     {
@@ -57,7 +61,23 @@ public class PlayerController : MonoBehaviour
         {
             if (!playerState.jumping && inputState.jump)
             {
-                if ((playerState.grounded || Time.time <= playerState.lastGroundTime + coyoteTime)
+                if (inputState.movementDirection.y < 0)
+                {
+                    if (standingColl2D?.GetComponent<PlatformEffector2D>())
+                    {
+                        GetComponent<Collider2D>().isTrigger = true;
+                        rb2d.velocity = Vector2.down;
+                        if (fallThroughTime == 0)
+                        {
+                            fallThroughTime = Time.time;
+                        }
+                    }
+                    else
+                    {
+                        GetComponent<Collider2D>().isTrigger = false;
+                    }
+                }
+                else if ((playerState.grounded || Time.time <= playerState.lastGroundTime + coyoteTime)
                     && !playerState.jumpConsumed
                 )
                 {
@@ -87,16 +107,13 @@ public class PlayerController : MonoBehaviour
         {
             playerState.jumpConsumed = false;
         }
-        //Transforming
-        if (playerState.grounded)
+        if (fallThroughTime > 0)
         {
-            if (inputState.movementDirection.y < 0)
+            if (Time.time >= fallThroughTime + fallThroughDuration)
             {
-                playerState.formIndex = 1;
-            }
-            if (inputState.movementDirection.y > 0)
-            {
-                playerState.formIndex = 0;
+                standingColl2D = null;
+                GetComponent<Collider2D>().isTrigger = false;
+                fallThroughTime = 0;
             }
         }
         //Ability
@@ -118,9 +135,10 @@ public class PlayerController : MonoBehaviour
             {
                 playerState.lastFallVelocity = collision.relativeVelocity.y;
             }
-            if (groundLayerIndices.Contains( collision.collider.gameObject.layer))
+            if (groundLayerIndices.Contains(collision.collider.gameObject.layer))
             {
                 ride(collision.collider.gameObject);
+                stand(collision.collider.gameObject);
             }
         }
     }
@@ -132,6 +150,7 @@ public class PlayerController : MonoBehaviour
             if (groundLayerIndices.Contains(collision.collider.gameObject.layer))
             {
                 ride(collision.collider.gameObject);
+                stand(collision.collider.gameObject);
             }
         }
     }
@@ -141,6 +160,7 @@ public class PlayerController : MonoBehaviour
         {
             setGrounded(false);
             ride(null);
+            stand(null);
         }
     }
 
@@ -184,6 +204,24 @@ public class PlayerController : MonoBehaviour
         if (!ridingRB2D)
         {
             ridingRB2D = go.GetComponentInChildren<Rigidbody2D>();
+        }
+    }
+
+    private void stand(GameObject go)
+    {
+        if (!go)
+        {
+            standingColl2D = null;
+            return;
+        }
+        standingColl2D = go.GetComponent<Collider2D>();
+        if (!standingColl2D)
+        {
+            standingColl2D = go.GetComponentInParent<Collider2D>();
+        }
+        if (!standingColl2D)
+        {
+            standingColl2D = go.GetComponentInChildren<Collider2D>();
         }
     }
 }
