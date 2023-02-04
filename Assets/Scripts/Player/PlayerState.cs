@@ -9,7 +9,7 @@ public struct PlayerState
     /// Horizontal direction the player intends on moving
     /// </summary>
     public float moveDirection;
-    public Vector2 influenceDirection;
+    public float influenceMovement;
     /// <summary>
     /// The vector the bow and arrow is pointing
     /// </summary>

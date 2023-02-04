@@ -32,14 +32,14 @@ public class PlayerController : MonoBehaviour
         }
         if (ridingRB2D)
         {
-            playerState.influenceDirection = ridingRB2D.velocity;
+            playerState.influenceMovement = ridingRB2D.velocity.x;
             onPlayerStateChanged?.Invoke(playerState);
         }
         else
         {
-            if (playerState.influenceDirection != Vector2.zero)
+            if (playerState.influenceMovement != 0)
             {
-                playerState.influenceDirection = Vector2.zero;
+                playerState.influenceMovement = 0;
                 onPlayerStateChanged?.Invoke(playerState);
             }
         }
