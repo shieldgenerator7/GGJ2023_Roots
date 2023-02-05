@@ -16,7 +16,7 @@ public class Enemy : MonoBehaviour
 
     private void Awake()
     {
-        TreeTracker.Instance.RegisterMob(gameObject);
+        TreeTracker.Instance?.RegisterMob(gameObject);
     }
 
     private void Start()
@@ -57,7 +57,7 @@ public class Enemy : MonoBehaviour
 
     private void OnDestroy()
     {
-        TreeTracker.Instance.DeregisterMob(gameObject);
+        TreeTracker.Instance?.DeregisterMob(gameObject);
     }
 
     public void KillMe()
