@@ -152,6 +152,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   follow: {fileID: 0}
+  groundLayerMask:
+    serializedVersion: 2
+    m_Bits: 192
+  minOrthoSize: 1
+  maxOrthoSize: 7
+  minDistance: 0
+  maxDistance: 10
 --- !u!1 &5385257660151716992
 GameObject:
   m_ObjectHideFlags: 0
