@@ -133,6 +133,12 @@ public class PlayerController : MonoBehaviour
     {
         if (collision.contacts.Length > 0 && collision.contacts[0].point.y <= bottom.position.y)
         {
+            Enemy enemy = collision.collider.gameObject.GetComponent<Enemy>();
+            if (enemy)
+            {
+                enemy.KillMe();
+                return;
+            }
             setGrounded(true);
             //if the player just landed
             if (collision.relativeVelocity.y > 0)
@@ -143,6 +149,15 @@ public class PlayerController : MonoBehaviour
             {
                 ride(collision.collider.gameObject);
                 stand(collision.collider.gameObject);
+            }
+        }
+        else
+        {
+            Enemy enemy = collision.collider.gameObject.GetComponent<Enemy>();
+            if (enemy)
+            {
+                transform.position = FindObjectOfType<TreeGameObject>().transform.position;
+                return;
             }
         }
     }
