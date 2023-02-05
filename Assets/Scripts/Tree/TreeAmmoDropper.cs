@@ -66,6 +66,9 @@ public class TreeAmmoDropper : MonoBehaviour
     {
         GameObject ammo = Instantiate(ammoPrefab);
         Transform leaf = tree.getRandomLeaf();
-        ammo.transform.position = (Vector2)leaf.position + dropoffset;
+        if (leaf)
+        {
+            ammo.transform.position = (Vector2)leaf.position + dropoffset;
+        }
     }
 }
