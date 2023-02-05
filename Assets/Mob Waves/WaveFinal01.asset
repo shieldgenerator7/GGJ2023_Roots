@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b3e46eee93146443960486f2f5a15eb, type: 3}
+  m_Name: WaveFinal01
+  m_EditorClassIdentifier: 
+  Mobs:
+  - Mob: {fileID: 6133131661770203922, guid: 2015371e71597aa4999535c2d4159dab, type: 3}
+    Count: 0
+  - Mob: {fileID: 6133131661770203922, guid: 87fe87872e7acd64f90f817e4c4d7ea2, type: 3}
+    Count: 4
+  - Mob: {fileID: 6133131661770203922, guid: 6e22d0b4b33216544a50fb7329aff773, type: 3}
+    Count: 6
+  - Mob: {fileID: 6133131661770203922, guid: 7d29c703a7e9f3c44a302d5497f838aa, type: 3}
+    Count: 0
+  - Mob: {fileID: 6133131661770203922, guid: 7f39132f98e8eb546b8d64e4ea4050ac, type: 3}
+    Count: 1
+  WaveAnnouncement: 'Wave 1: Get Ready!'
