@@ -150,7 +150,7 @@ RectTransform:
   m_GameObject: {fileID: 164664573}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 5, y: 5, z: 1}
+  m_LocalScale: {x: 10.083656, y: 9.446794, z: 1.6983}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1599509001}
@@ -211,7 +211,6 @@ GameObject:
   - component: {fileID: 529395750}
   - component: {fileID: 529395749}
   - component: {fileID: 529395752}
-  - component: {fileID: 529395753}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -262,7 +261,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 5
+  orthographic size: 10
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -336,27 +335,6 @@ MonoBehaviour:
     mipBias: 0
     varianceClampScale: 0.9
     contrastAdaptiveSharpening: 0
---- !u!114 &529395753
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 529395748}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 90cbdd1c6e25c5a4091cd88e91e74e3d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  follow: {fileID: 1599509001}
-  groundLayerMask:
-    serializedVersion: 2
-    m_Bits: 0
-  minOrthoSize: 1
-  maxOrthoSize: 7
-  minDistance: 0
-  maxDistance: 10
-  groundDetectOffset: 1
 --- !u!1 &575257934
 GameObject:
   m_ObjectHideFlags: 0
@@ -384,7 +362,7 @@ RectTransform:
   m_GameObject: {fileID: 575257934}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.025, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1599509001}
@@ -392,8 +370,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 8, y: 129}
-  m_SizeDelta: {x: 500, y: 500}
+  m_AnchoredPosition: {x: 0.000030518, y: 192}
+  m_SizeDelta: {x: 533.9, y: 200}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &575257936
 MonoBehaviour:
@@ -417,7 +395,7 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: 0d286cc4cdcd64527af73493fb279043, type: 3}
-    m_FontSize: 40
+    m_FontSize: 56
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0
@@ -466,7 +444,7 @@ RectTransform:
   m_GameObject: {fileID: 1347697693}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.2234375, y: 1.2632811, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1815076913}
@@ -475,8 +453,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 98, y: -65}
-  m_SizeDelta: {x: 61.5658, y: 30}
+  m_AnchoredPosition: {x: 107, y: -73}
+  m_SizeDelta: {x: 66.55, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1347697696
 MonoBehaviour:
@@ -619,8 +597,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0.0000038146973, y: 0}
+  m_SizeDelta: {x: -0.0000019073514, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1426222943
 MonoBehaviour:
@@ -712,12 +690,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 800, y: 600}
   m_ScreenMatchMode: 0
-  m_MatchWidthOrHeight: 0
+  m_MatchWidthOrHeight: 0.5
   m_PhysicalUnit: 3
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
@@ -732,8 +710,8 @@ Canvas:
   m_GameObject: {fileID: 1599508997}
   m_Enabled: 1
   serializedVersion: 3
-  m_RenderMode: 0
-  m_Camera: {fileID: 0}
+  m_RenderMode: 1
+  m_Camera: {fileID: 529395750}
   m_PlaneDistance: 100
   m_PixelPerfect: 0
   m_ReceivesEvents: 1
@@ -799,7 +777,7 @@ RectTransform:
   m_GameObject: {fileID: 1613481747}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.1643751, y: 1.2735938, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1426222942}
@@ -808,8 +786,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -74, y: -58}
-  m_SizeDelta: {x: 61.5658, y: 30}
+  m_AnchoredPosition: {x: -81.305, y: -73}
+  m_SizeDelta: {x: 62.61, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1613481749
 MonoBehaviour:
@@ -946,7 +924,7 @@ RectTransform:
   m_GameObject: {fileID: 1645990884}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 2.35, y: 2.55, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1786499209}
@@ -955,8 +933,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 19.784, y: -113}
-  m_SizeDelta: {x: 60.4311, y: 32.2694}
+  m_AnchoredPosition: {x: 0.000019073, y: -144}
+  m_SizeDelta: {x: 79.21, y: 30.35}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1645990886
 MonoBehaviour:
@@ -1091,7 +1069,7 @@ RectTransform:
   m_GameObject: {fileID: 1786499208}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.45, y: 0.4125, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1645990885}
@@ -1124,7 +1102,7 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: 0d286cc4cdcd64527af73493fb279043, type: 3}
-    m_FontSize: 15
+    m_FontSize: 24
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0
