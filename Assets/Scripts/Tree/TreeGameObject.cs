@@ -48,6 +48,7 @@ public class TreeGameObject : MonoBehaviour
             else
             {
                 leaves[i].GetComponent<LeafEffects>().TriggerEffect();
+                leaves[i].GetComponent<NPCPerch>().unperch();
                 leaves[i].gameObject.SetActive(false);
             }
 

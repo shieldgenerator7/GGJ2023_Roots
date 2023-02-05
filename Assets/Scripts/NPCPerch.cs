@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -17,13 +18,13 @@ public class NPCPerch : MonoBehaviour
 
     }
 
-    private void OnDisable()
+    internal void unperch()
     {
         if (npc)
         {
             npc.transform.parent = null;
-            this.npc = null;
             npc.Collected = false;
+            this.npc = null;
         }
     }
 }
