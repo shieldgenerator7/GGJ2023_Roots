@@ -27,12 +27,15 @@ public class PlayerMover : MonoBehaviour
         vel.x = playerState.moveDirection
             * ((playerState.running) ? attributes.runSpeed : attributes.walkSpeed)
             + playerState.influenceMovement;
-        if (playerState.jumping && playerState.grounded)
+        if (playerState.jumping && playerState.grounded )
         {
-            vel.y = attributes.jumpForce;
-            if (playerState.superJumping)
+            if (!playerState.jumpConsumed || playerState.jumpConsumedThisFrame)
             {
-                vel.y += Mathf.Abs(playerState.lastFallVelocity);
+                vel.y = attributes.jumpForce;
+                if (playerState.superJumping)
+                {
+                    vel.y += Mathf.Abs(playerState.lastFallVelocity);
+                }
             }
         }
         else if (!playerState.jumping && !playerState.grounded)

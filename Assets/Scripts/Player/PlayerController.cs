@@ -58,6 +58,7 @@ public class PlayerController : MonoBehaviour
         //Look Direction
         playerState.lookDirection = inputState.lookDirection;
         //Jumping
+        playerState.jumpConsumedThisFrame = false;
         if (playerState.jumping != inputState.jump)
         {
             if (!playerState.jumping && inputState.jump)
@@ -75,6 +76,7 @@ public class PlayerController : MonoBehaviour
                                 fallThroughTime = Time.time;
                             }
                             playerState.jumpConsumed = true;
+                            playerState.jumpConsumedThisFrame = true;
                         }
                     }
                     else
@@ -89,6 +91,7 @@ public class PlayerController : MonoBehaviour
                     SFXContoller.instance?.PlaySFX(jumpClip);
                     playerState.jumping = true;
                     playerState.jumpConsumed = true;
+                    playerState.jumpConsumedThisFrame = true;
                     playerState.falling = false;
                     //playerState.grounded = true;
                     if (Time.time <= playerState.lastAirTime + bounceWindow)
@@ -112,6 +115,7 @@ public class PlayerController : MonoBehaviour
         if (!inputState.jump)
         {
             playerState.jumpConsumed = false;
+            playerState.jumpConsumedThisFrame = false;
         }
         if (fallThroughTime > 0)
         {
