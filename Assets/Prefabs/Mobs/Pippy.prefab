@@ -178,7 +178,7 @@ MonoBehaviour:
   jumpRange: 2
   jumpPower: 40
   jumpHeightOffset: 3
-  DropChance: 100
+  DropChance: 25
   ItemDrop: {fileID: 3179023008219385200, guid: 76032cfccd429bf4084aa42e106bc34e, type: 3}
 --- !u!95 &7929287780314474107
 Animator:
