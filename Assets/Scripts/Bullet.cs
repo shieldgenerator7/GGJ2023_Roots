@@ -8,7 +8,7 @@ public class Bullet : MonoBehaviour
 
     private void FixedUpdate()
     {
-        lifeSpan -= Time.deltaTime;
+        lifeSpan -= Time.fixedDeltaTime;
         if (lifeSpan <= 0f)
         {
             Destroy(gameObject);
