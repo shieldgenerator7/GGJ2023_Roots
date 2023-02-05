@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class EndController : MonoBehaviour
 {
     public TreeController tree;
+    public TreeGameObject treeHealth;
     public float duration = 0;
     public KeyCode keyCode = KeyCode.None;
 
@@ -22,9 +23,15 @@ public class EndController : MonoBehaviour
             tree.onCompleted += onCompleted;
             this.enabled = false;
         }
+        if (treeHealth)
+        {
+            treeHealth.treeHealth.onHealthChanged += listenForDeath;
+            this.enabled = false;
+        }
         if (duration > 0)
         {
             startTime = Time.time;
+            this.enabled = true;
         }
     }
 
@@ -44,6 +51,14 @@ public class EndController : MonoBehaviour
             {
                 onCompleted();
             }
+        }
+    }
+
+    void listenForDeath(int health)
+    {
+        if (health <= 0)
+        {
+            onCompleted();
         }
     }
 
