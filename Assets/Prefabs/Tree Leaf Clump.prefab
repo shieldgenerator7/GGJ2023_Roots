@@ -161,6 +161,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   effect: {fileID: 6416247896185223516, guid: a7d344d9081691d448df97cae95fb52e, type: 3}
+  clip: {fileID: 8300000, guid: f60115d7f95740140abbec0fe48565c7, type: 3}
 --- !u!114 &1129895225638623928
 MonoBehaviour:
   m_ObjectHideFlags: 0

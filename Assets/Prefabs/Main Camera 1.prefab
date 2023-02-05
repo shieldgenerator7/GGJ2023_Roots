@@ -159,6 +159,7 @@ MonoBehaviour:
   maxOrthoSize: 7
   minDistance: 0
   maxDistance: 10
+  groundDetectOffset: 0.005
 --- !u!1 &5385257660151716992
 GameObject:
   m_ObjectHideFlags: 0
