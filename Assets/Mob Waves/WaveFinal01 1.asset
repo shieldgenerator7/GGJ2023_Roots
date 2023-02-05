@@ -23,4 +23,4 @@ MonoBehaviour:
     Count: 0
   - Mob: {fileID: 6133131661770203922, guid: 7f39132f98e8eb546b8d64e4ea4050ac, type: 3}
     Count: 1
-  WaveAnnouncement: Incoming!!!
+  WaveAnnouncement: Incomin
