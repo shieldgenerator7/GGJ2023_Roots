@@ -68,6 +68,18 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6306077175331590995, guid: 9bd6050edb65c4b4f9d38e937e10a754, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6306077175331590995, guid: 9bd6050edb65c4b4f9d38e937e10a754, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6306077175331590995, guid: 9bd6050edb65c4b4f9d38e937e10a754, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6306077175331590999, guid: 9bd6050edb65c4b4f9d38e937e10a754, type: 3}
       propertyPath: m_Name
       value: Bullet_Player
