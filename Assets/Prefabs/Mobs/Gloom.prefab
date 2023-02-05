@@ -33,7 +33,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &7459925763335937572
 SpriteRenderer:
@@ -173,7 +173,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 3
   deathEffect: {fileID: 6214931794963179021, guid: 72ed1a39258f9b742a8db6409a64eb5d, type: 3}
-  strength: 90
+  strength: 70
   jumpRange: 2
   jumpPower: 40
   jumpHeightOffset: 3
