@@ -98,4 +98,29 @@ public class TreeGameObject : MonoBehaviour
     {
         return go.activeSelf && !(go.GetComponent<NPCPerch>()?.HasNPC ?? true);
     }
+
+    internal Transform getRandomLeaf()
+    {
+        if (!leaves.Any(leaf => validPerch(leaf.gameObject)))
+        {
+            return null;
+        }
+        int loopInsurance = 100;
+        while (true)
+        {
+            int index = UnityEngine.Random.Range(0, leaves.Count - 1);
+            GameObject go = leaves[index].gameObject;
+            if (validPerch(go))
+            {
+                return go.transform;
+            }
+            //
+            loopInsurance--;
+            if (loopInsurance <= 0)
+            {
+                return null;
+            }
+        }
+        return null;
+    }
 }
