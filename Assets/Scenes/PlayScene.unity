@@ -10208,6 +10208,18 @@ PrefabInstance:
       propertyPath: m_SpriteTilingProperty.oldSize.y
       value: 0.238
       objectReference: {fileID: 0}
+    - target: {fileID: 2908674092987576388, guid: fb33753db14d1444c91ee1507ec0eee3, type: 3}
+      propertyPath: voiceLines.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2908674092987576388, guid: fb33753db14d1444c91ee1507ec0eee3, type: 3}
+      propertyPath: voiceLines.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: 013d124a76ffdb243a05fefec5a2864d, type: 3}
+    - target: {fileID: 2908674092987576388, guid: fb33753db14d1444c91ee1507ec0eee3, type: 3}
+      propertyPath: voiceLines.Array.data[1]
+      value: 
+      objectReference: {fileID: 8300000, guid: d7d5d9c95152fb941b4371acba08c93a, type: 3}
     - target: {fileID: 4086981645680229219, guid: fb33753db14d1444c91ee1507ec0eee3, type: 3}
       propertyPath: m_Enabled
       value: 0
@@ -13406,6 +13418,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2908674092987576388, guid: fb33753db14d1444c91ee1507ec0eee3, type: 3}
+      propertyPath: voiceLines.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2908674092987576388, guid: fb33753db14d1444c91ee1507ec0eee3, type: 3}
+      propertyPath: voiceLines.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: a2295ae9dbb798b48a4b265d2b772b68, type: 3}
+    - target: {fileID: 2908674092987576388, guid: fb33753db14d1444c91ee1507ec0eee3, type: 3}
+      propertyPath: voiceLines.Array.data[1]
+      value: 
+      objectReference: {fileID: 8300000, guid: d9e0c3db9b33a584d9bf3c29398133ce, type: 3}
     - target: {fileID: 4086981645680229219, guid: fb33753db14d1444c91ee1507ec0eee3, type: 3}
       propertyPath: m_Enabled
       value: 0
@@ -16010,6 +16034,18 @@ PrefabInstance:
       propertyPath: m_SpriteTilingProperty.oldSize.y
       value: 0.238
       objectReference: {fileID: 0}
+    - target: {fileID: 2908674092987576388, guid: fb33753db14d1444c91ee1507ec0eee3, type: 3}
+      propertyPath: voiceLines.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: 2a99104c6c7f6a0488c43a908cfce4d6, type: 3}
+    - target: {fileID: 2908674092987576388, guid: fb33753db14d1444c91ee1507ec0eee3, type: 3}
+      propertyPath: voiceLines.Array.data[1]
+      value: 
+      objectReference: {fileID: 8300000, guid: 62c978c23600d9548af21b854dfad7f0, type: 3}
+    - target: {fileID: 2908674092987576388, guid: fb33753db14d1444c91ee1507ec0eee3, type: 3}
+      propertyPath: voiceLines.Array.data[2]
+      value: 
+      objectReference: {fileID: 8300000, guid: cd7c6e9b3d159f84099b4fae67700aa2, type: 3}
     - target: {fileID: 4086981645680229219, guid: fb33753db14d1444c91ee1507ec0eee3, type: 3}
       propertyPath: m_Enabled
       value: 0
@@ -16105,6 +16141,10 @@ PrefabInstance:
     - target: {fileID: 1667090571514008037, guid: fb33753db14d1444c91ee1507ec0eee3, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.y
       value: 0.308
+      objectReference: {fileID: 0}
+    - target: {fileID: 2908674092987576388, guid: fb33753db14d1444c91ee1507ec0eee3, type: 3}
+      propertyPath: voiceLines.Array.size
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4086981645680229219, guid: fb33753db14d1444c91ee1507ec0eee3, type: 3}
       propertyPath: m_Enabled
@@ -16370,6 +16410,18 @@ PrefabInstance:
       propertyPath: m_SpriteTilingProperty.oldSize.y
       value: 0.286
       objectReference: {fileID: 0}
+    - target: {fileID: 2908674092987576388, guid: fb33753db14d1444c91ee1507ec0eee3, type: 3}
+      propertyPath: voiceLines.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2908674092987576388, guid: fb33753db14d1444c91ee1507ec0eee3, type: 3}
+      propertyPath: voiceLines.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: 67073235d9fb191499a28292ecb1b256, type: 3}
+    - target: {fileID: 2908674092987576388, guid: fb33753db14d1444c91ee1507ec0eee3, type: 3}
+      propertyPath: voiceLines.Array.data[1]
+      value: 
+      objectReference: {fileID: 8300000, guid: d28516c6db5eaf847b5da1a011835aa8, type: 3}
     - target: {fileID: 4086981645680229219, guid: fb33753db14d1444c91ee1507ec0eee3, type: 3}
       propertyPath: m_Enabled
       value: 0
@@ -18768,6 +18820,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2908674092987576388, guid: fb33753db14d1444c91ee1507ec0eee3, type: 3}
+      propertyPath: voiceLines.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2908674092987576388, guid: fb33753db14d1444c91ee1507ec0eee3, type: 3}
+      propertyPath: voiceLines.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: 851b8da25525a3647971bc7f226021c3, type: 3}
+    - target: {fileID: 2908674092987576388, guid: fb33753db14d1444c91ee1507ec0eee3, type: 3}
+      propertyPath: voiceLines.Array.data[1]
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 4086981645680229219, guid: fb33753db14d1444c91ee1507ec0eee3, type: 3}
       propertyPath: m_Enabled
       value: 0
