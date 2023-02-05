@@ -35,13 +35,19 @@ public class TreeGameObject : MonoBehaviour
     {
         //Show / hide leaves based on the percentage of health the tree has
         float percent = ((float)health) / ((float)treeHealth.MaxHealth);
-        Debug.Log($"percent {percent}");
         bool alive = health > 0;
         for (int i = 0; i < leaves.Count; i++)
         {
-            leaves[i].gameObject.SetActive(
-                alive && (float)i / (float)leaves.Count <= percent
-                );
+            if(alive && (float)i / (float)leaves.Count <= percent)
+            {
+                leaves[i].gameObject.SetActive(true);
+            }
+            else
+            {
+                leaves[i].GetComponent<LeafEffects>().TriggerEffect();
+                leaves[i].gameObject.SetActive(false);
+            }
+   
         }
     }
 }

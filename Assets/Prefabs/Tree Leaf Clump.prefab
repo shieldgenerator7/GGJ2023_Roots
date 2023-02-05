@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 5403108303796620809}
   - component: {fileID: 2957276394676610567}
   - component: {fileID: 686451994704555309}
+  - component: {fileID: 293557203525048339}
   m_Layer: 7
   m_Name: Tree Leaf Clump
   m_TagString: Untagged
@@ -74,9 +75,9 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: e9ead02ecb8772c4391769b65724155b, type: 3}
-  m_Color: {r: 0, g: 0.41509432, b: 0.05493891, a: 1}
+  m_SortingOrder: 1
+  m_Sprite: {fileID: 121544224, guid: 1e902307dc491464f9fa6eef0adb0c0a, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -118,7 +119,7 @@ EdgeCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 1
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0.45}
+  m_Offset: {x: 0, y: -1.07}
   m_EdgeRadius: 0
   m_Points:
   - {x: -0.749, y: 0.972}
@@ -146,3 +147,16 @@ PlatformEffector2D:
   m_UseSideFriction: 0
   m_UseSideBounce: 0
   m_SideArc: 1
+--- !u!114 &293557203525048339
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7662702537930764504}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b430d9e104eee23428d9668b39baf1fe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  effect: {fileID: 6416247896185223516, guid: a7d344d9081691d448df97cae95fb52e, type: 3}
