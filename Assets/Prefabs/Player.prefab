@@ -108,7 +108,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 10
   m_Sprite: {fileID: 21300000, guid: 2214473e22390ae4682be140bb12ef97, type: 3}
   m_Color: {r: 0.9245283, g: 0.9026759, b: 0.7195621, a: 1}
   m_FlipX: 0
@@ -196,10 +196,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   coyoteTime: 0.1
   bounceWindow: 0.1
+  fallThroughDuration: 0.1
   groundLayerIndices: 0600000007000000
   bottom: {fileID: 2306693783991847015}
   playerState:
     moveDirection: 0
+    influenceMovement: 0
     lookDirection: {x: 0, y: 0}
     running: 0
     jumping: 0

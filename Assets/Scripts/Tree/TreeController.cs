@@ -5,6 +5,7 @@ using UnityEngine;
 public class TreeController : MonoBehaviour
 {
     public float speed = 1;
+    public float slowPercent = 0.1f;
 
     public Track track;
 
@@ -20,12 +21,12 @@ public class TreeController : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         var movespeed = speed;
-        if (TreeTracker.Instance.isWaveActive)
+        if (TreeTracker.Instance?.isWaveActive ?? false)
         {
-            movespeed = speed * .1f;
+            movespeed = speed * slowPercent;
         }
         distance += movespeed * Time.deltaTime;
         updatePosition(movespeed);
