@@ -1,12 +1,12 @@
-using System.Collections;
-using System.Collections.Generic;
-using Unity.VisualScripting.YamlDotNet.Core.Tokens;
+
 using UnityEngine;
 
 public class PlayerShooter : MonoBehaviour
 {
     public float spawnBuffer = 1;
     public float launchSpeed = 5;
+
+    public AudioClip gunSound;
 
 
     public float maxAmmo = 50f;
@@ -44,6 +44,7 @@ public class PlayerShooter : MonoBehaviour
                     bulletShot = true;
                     spawnBullet(playerState.lookDirection);
                     _ammo -= 1f;
+                    SFXContoller.instance.PlaySFX(gunSound);
                 }
             }
         }

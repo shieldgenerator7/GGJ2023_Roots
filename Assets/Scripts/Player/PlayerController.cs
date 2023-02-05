@@ -15,6 +15,7 @@ public class PlayerController : MonoBehaviour
     public delegate void OnPlayerStateChanged(PlayerState playerState);
     public event OnPlayerStateChanged onPlayerStateChanged;
 
+    public AudioClip jumpClip;
     private Rigidbody2D rb2d;
     private Rigidbody2D ridingRB2D;
     private Collider2D standingColl2D;
@@ -61,6 +62,7 @@ public class PlayerController : MonoBehaviour
         {
             if (!playerState.jumping && inputState.jump)
             {
+                SFXContoller.instance?.PlaySFX(jumpClip);
                 if (inputState.movementDirection.y < 0)
                 {
                     if (standingColl2D?.GetComponent<PlatformEffector2D>())
