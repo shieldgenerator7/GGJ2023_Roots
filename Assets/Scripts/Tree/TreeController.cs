@@ -1,11 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class TreeController : MonoBehaviour
 {
     public float speed = 1;
     public float slowPercent = 0.1f;
+    public float enemySearchRadius = 10;
 
     public Track track;
 
@@ -26,7 +28,17 @@ public class TreeController : MonoBehaviour
         var movespeed = speed;
         if (TreeTracker.Instance?.isWaveActive ?? false)
         {
-            movespeed = speed * slowPercent;
+            bool slow = false;
+            RaycastHit2D[] rch2ds = Physics2D.CircleCastAll(transform.position, enemySearchRadius, Vector2.right, 0);
+            if (rch2ds.Any(rch2d => rch2d.collider.GetComponent<Enemy>()))
+            {
+                slow = true;
+            }
+
+            if (slow)
+            {
+                movespeed = speed * slowPercent;
+            }
         }
         distance += movespeed * Time.deltaTime;
         updatePosition(movespeed);
