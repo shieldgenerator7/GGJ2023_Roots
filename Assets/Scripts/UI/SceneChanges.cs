@@ -29,11 +29,6 @@ public class SceneChange : MonoBehaviour
         SceneManager.LoadScene("win");
     }
 
-    public void LoseScene()
-    {
-        SceneManager.LoadScene("lose");
-    }
-
     public void CreditsScene()
     {
         SceneManager.LoadScene("Credits");
@@ -47,7 +42,6 @@ public class SceneChange : MonoBehaviour
         Lose,
         Win,
         Credits,
-        Lose,
     }
 
     public void goToScene(Scene scene)
@@ -71,9 +65,6 @@ public class SceneChange : MonoBehaviour
                 break;
             case Scene.Credits:
                 CreditsScene();
-                break;
-            case Scene.Lose:
-                LoseScene();
                 break;
 
         }
