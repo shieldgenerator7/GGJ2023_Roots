@@ -7,7 +7,7 @@ public class SFXContoller : MonoBehaviour
 {
     private AudioSource sfx;
 
-    private SFXContoller instance;
+    public static SFXContoller instance;
     // Start is called before the first frame update
     void Awake()
     {
