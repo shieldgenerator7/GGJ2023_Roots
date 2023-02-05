@@ -92,6 +92,6 @@ public class CameraController : MonoBehaviour
 
     float getPercent(float distance)
     {
-        return (distance - minDistance) / (maxDistance - minDistance);
+        return Mathf.Max(0, (distance - minDistance) / (maxDistance - minDistance));
     }
 }
