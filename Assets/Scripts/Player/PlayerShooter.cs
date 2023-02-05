@@ -9,8 +9,9 @@ public class PlayerShooter : MonoBehaviour
     public float launchSpeed = 5;
 
 
-    public float maxAmmo = 100f;
-    private float _ammo = 50f;
+    public float maxAmmo = 50f;
+    public int startingAmmo = 25;
+    private float _ammo = 25f;
 
     public float ammo
     {
@@ -26,6 +27,11 @@ public class PlayerShooter : MonoBehaviour
     public GameObject bulletPrefab;
 
     private bool bulletShot = false;
+
+    private void Awake()
+    {
+        ammo = startingAmmo;
+    }
 
     public void processPlayerStateChanged(PlayerState playerState)
     {
@@ -59,7 +65,7 @@ public class PlayerShooter : MonoBehaviour
         ammo = _ammo + amount;
     }
 
-    public int GetAmmoPercent() {
-        return (int)(_ammo / maxAmmo * 100f);
+    public float GetAmmoPercent() {
+        return _ammo / maxAmmo;
     }
 }
