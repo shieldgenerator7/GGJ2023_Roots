@@ -116,7 +116,7 @@ Transform:
   m_Children:
   - {fileID: 513010014}
   m_Father: {fileID: 0}
-  m_RootOrder: -1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &3692918756563387432
 MonoBehaviour:
@@ -133,6 +133,7 @@ MonoBehaviour:
   Bullet: {fileID: 6306077175331590999, guid: 9bd6050edb65c4b4f9d38e937e10a754, type: 3}
   Frequency: 0.6
   velocity: 500
+  gunClip: {fileID: 8300000, guid: 4898eb3be58e0dd40b75275a38d93d8b, type: 3}
   origin: {fileID: 513010014}
 --- !u!212 &2022548
 SpriteRenderer:
