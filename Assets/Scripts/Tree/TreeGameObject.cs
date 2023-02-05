@@ -16,6 +16,8 @@ public class TreeGameObject : MonoBehaviour
 
     public TreeHealth treeHealth { get; private set; }
 
+    public AudioClip clip;
+
     // Start is called before the first frame update
     void Awake()
     {
@@ -37,22 +39,33 @@ public class TreeGameObject : MonoBehaviour
     private void updateLeaves(int health)
     {
         //Show / hide leaves based on the percentage of health the tree has
-        float percent = ((float)health) / ((float)treeHealth.MaxHealth);
+        float percent = ((float)health) / ((float)treeHealth.MaxHealth) * leaves.Count;
         bool alive = health > 0;
-        for (int i = 0; i < leaves.Count; i++)
+        if (alive)
         {
-            if (alive && (float)i / (float)leaves.Count <= percent)
+            for (int i = 0; i < leaves.Count; i++)
             {
-                leaves[i].gameObject.SetActive(true);
-            }
-            else
-            {
-                leaves[i].GetComponent<LeafEffects>().TriggerEffect();
-                leaves[i].GetComponent<NPCPerch>().unperch();
-                leaves[i].gameObject.SetActive(false);
-            }
+                if (i <= percent)
+                {
+                    if (leaves[i].gameObject.activeSelf == false)
+                    {
+                        leaves[i].gameObject.SetActive(true);
+                        SFXContoller.instance?.PlaySFX(clip);
+                    }
+                }
+                else
+                {
+                    if (leaves[i].gameObject.activeSelf != false)
+                    {
+                        leaves[i].GetComponent<LeafEffects>().TriggerEffect();
+                        leaves[i].GetComponent<NPCPerch>().unperch();
+                        leaves[i].gameObject.SetActive(false);
+                    }
+                }
 
+            }
         }
+
     }
 
     internal void findPerch(NPC npc)

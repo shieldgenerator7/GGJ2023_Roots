@@ -28,4 +28,36 @@ public class SceneChange : MonoBehaviour
     {
         SceneManager.LoadScene("Credits");
     }
+
+    public enum Scene
+    {
+        MainMenu,
+        Intro,
+        Play,
+        Win,
+        Credits,
+    }
+
+    public void goToScene(Scene scene)
+    {
+        switch (scene)
+        {
+            case Scene.MainMenu:
+                MainMenuScene();
+                break;
+            case Scene.Intro:
+                IntroScene();
+                break;
+            case Scene.Play:
+                PlayScene();
+                break;
+            case Scene.Win:
+                WinScene();
+                break;
+            case Scene.Credits:
+                CreditsScene();
+                break;
+
+        }
+    }
 }
