@@ -174,7 +174,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 5
   deathEffect: {fileID: 6214931794963179021, guid: 72ed1a39258f9b742a8db6409a64eb5d, type: 3}
-  strength: 5
+  strength: 20
   jumpRange: 2
   jumpPower: 40
   jumpHeightOffset: 3
