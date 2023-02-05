@@ -7,6 +7,7 @@ public class EndController : MonoBehaviour
 {
     public TreeController tree;
     public float duration = 0;
+    public KeyCode keyCode = KeyCode.None;
 
     public SceneChange sceneChange;
     public SceneChange.Scene scene;
@@ -33,6 +34,13 @@ public class EndController : MonoBehaviour
         if (duration > 0)
         {
             if (Time.time > startTime + duration)
+            {
+                onCompleted();
+            }
+        }
+        if (keyCode != KeyCode.None)
+        {
+            if (Input.GetKeyDown(keyCode))
             {
                 onCompleted();
             }
