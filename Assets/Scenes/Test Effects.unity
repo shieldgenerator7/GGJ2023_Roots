@@ -131,14 +131,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 337677596, guid: 76032cfccd429bf4084aa42e106bc34e, type: 3}
-      propertyPath: ShapeModule.radius.value
-      value: 0.21
-      objectReference: {fileID: 0}
-    - target: {fileID: 337677596, guid: 76032cfccd429bf4084aa42e106bc34e, type: 3}
-      propertyPath: InitialModule.startSize.scalar
-      value: 0.15
-      objectReference: {fileID: 0}
     - target: {fileID: 3179023008219385200, guid: 76032cfccd429bf4084aa42e106bc34e, type: 3}
       propertyPath: m_Name
       value: Collectable

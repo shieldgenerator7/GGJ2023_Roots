@@ -16,7 +16,7 @@ public class TreeGameObject : MonoBehaviour
 
     public TreeHealth treeHealth { get; private set; }
 
-    public AudioClip clip;
+    public AudioClip clip, healClip;
 
     // Start is called before the first frame update
     void Awake()
@@ -50,13 +50,14 @@ public class TreeGameObject : MonoBehaviour
                     if (leaves[i].gameObject.activeSelf == false)
                     {
                         leaves[i].gameObject.SetActive(true);
-                        SFXContoller.instance?.PlaySFX(clip);
+                        SFXContoller.instance?.PlaySFX(healClip);
                     }
                 }
                 else
                 {
                     if (leaves[i].gameObject.activeSelf != false)
                     {
+                        SFXContoller.instance?.PlaySFX(clip);
                         leaves[i].GetComponent<LeafEffects>().TriggerEffect();
                         leaves[i].GetComponent<NPCPerch>().unperch();
                         leaves[i].gameObject.SetActive(false);

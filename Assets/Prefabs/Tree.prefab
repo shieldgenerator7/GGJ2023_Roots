@@ -178,7 +178,8 @@ MonoBehaviour:
   - {fileID: 2487020274130818652}
   - {fileID: 7776165288156146421}
   - {fileID: 1694813550810591450}
-  clip: {fileID: 0}
+  clip: {fileID: 8300000, guid: 2631b7141011a304c8875894cddf371b, type: 3}
+  healClip: {fileID: 8300000, guid: 70555c2dbb04b0b4db0ce0313aac74e9, type: 3}
 --- !u!114 &8561115757649941337
 MonoBehaviour:
   m_ObjectHideFlags: 0

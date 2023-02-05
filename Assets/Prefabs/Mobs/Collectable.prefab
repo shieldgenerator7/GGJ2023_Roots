@@ -4982,7 +4982,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 3
+  m_Radius: 0.73
 --- !u!114 &1902144932182066443
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4997,6 +4997,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   AddAmmoAmount: 10
   lifeSpawn: 15
+  clip: {fileID: 8300000, guid: 70555c2dbb04b0b4db0ce0313aac74e9, type: 3}
 --- !u!1 &3179023009391769398
 GameObject:
   m_ObjectHideFlags: 0

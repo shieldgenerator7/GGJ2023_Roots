@@ -6,12 +6,14 @@ public class CollectItem : MonoBehaviour
 {
     public int AddAmmoAmount = 1;
     public float lifeSpawn = 15f;
+    public AudioClip clip;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if(collision.gameObject.tag == "Player")
         {
             collision.gameObject.GetComponent<PlayerShooter>().AddAmmo(AddAmmoAmount);
+            SFXContoller.instance.PlaySFX(clip);
             Destroy(gameObject);
         }
     }
