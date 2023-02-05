@@ -175,6 +175,9 @@ MonoBehaviour:
   speed: 9
   deathEffect: {fileID: 6214931794963179021, guid: 72ed1a39258f9b742a8db6409a64eb5d, type: 3}
   strength: 1
+  jumpRange: 2
+  jumpPower: 40
+  jumpHeightOffset: 3
 --- !u!95 &7929287780314474107
 Animator:
   serializedVersion: 5

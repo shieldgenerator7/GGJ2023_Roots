@@ -13,6 +13,11 @@ public class Enemy : MonoBehaviour
     public float speed = 5f;
     public GameObject deathEffect;
     public int strength;
+    public float jumpRange = 2;
+    public float jumpPower = 5;
+    public float jumpHeightOffset = 4;
+
+    private bool jumped = false;
 
     private void Awake()
     {
@@ -29,13 +34,26 @@ public class Enemy : MonoBehaviour
     {
         if (TreeTracker.Instance != null)
         {
-            if (transform.position.x < TreeTracker.Instance.TreeLocation.position.x)
+            Vector2 treeLocation = TreeTracker.Instance.TreeLocation.position;
+            Vector2 treeDir = treeLocation - (Vector2)transform.position;
+            if (treeDir.magnitude <= jumpRange)
             {
-                rb.velocity = new Vector3(speed, 0f, 0f);
+                if (!jumped)
+                {
+                    rb.velocity = (treeDir + (Vector2.up * jumpHeightOffset)).normalized * jumpPower;
+                    jumped = true;
+                }
             }
             else
             {
-                rb.velocity = new Vector3(speed * -1, 0f, 0f);
+                if (transform.position.x < treeLocation.x)
+                {
+                    rb.velocity = new Vector3(speed, 0f, 0f);
+                }
+                else
+                {
+                    rb.velocity = new Vector3(speed * -1, 0f, 0f);
+                }
             }
         }
         else
@@ -51,8 +69,9 @@ public class Enemy : MonoBehaviour
         {
             collision.gameObject.GetComponent<TreeGameObject>().Damage(strength);
             KillMe();
-            
+
         }
+        jumped = false;
     }
 
     private void OnDestroy()

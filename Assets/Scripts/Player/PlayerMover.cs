@@ -43,5 +43,13 @@ public class PlayerMover : MonoBehaviour
             }
         }
         rb2d.velocity = vel;
+
+        if (vel.x != 0)
+        {
+            Vector3 scale = transform.localScale;
+            scale.x = Mathf.Abs(scale.x) * ((vel.x < 0) ? -1 : 1);
+            transform.localScale = scale;
+        }
+
     }
 }
