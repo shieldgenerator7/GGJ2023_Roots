@@ -1,11 +1,27 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting.YamlDotNet.Core.Tokens;
 using UnityEngine;
 
 public class PlayerShooter : MonoBehaviour
 {
     public float spawnBuffer = 1;
     public float launchSpeed = 5;
+
+
+    public float maxAmmo = 100f;
+    private float _ammo = 50f;
+
+    public float ammo
+    {
+        set {
+            _ammo = value;
+            if(_ammo > maxAmmo)
+                _ammo = maxAmmo;
+            if(_ammo < 0 ) 
+                _ammo = 0;
+        } 
+    }
 
     public GameObject bulletPrefab;
 
@@ -17,8 +33,12 @@ public class PlayerShooter : MonoBehaviour
         {
             if (!bulletShot)
             {
-                bulletShot = true;
-                spawnBullet(playerState.lookDirection);
+                if (_ammo > 0f)
+                {
+                    bulletShot = true;
+                    spawnBullet(playerState.lookDirection);
+                    _ammo -= 1f;
+                }
             }
         }
         else
@@ -32,5 +52,14 @@ public class PlayerShooter : MonoBehaviour
         GameObject bullet = Instantiate(bulletPrefab);
         bullet.transform.position = (Vector2)transform.position + (dir.normalized * spawnBuffer);
         bullet.GetComponent<Rigidbody2D>().velocity = dir.normalized * launchSpeed;
+    }
+
+    public void AddAmmo(int amount)
+    {
+        ammo = _ammo + amount;
+    }
+
+    public int GetAmmoPercent() {
+        return (int)(_ammo / maxAmmo * 100f);
     }
 }

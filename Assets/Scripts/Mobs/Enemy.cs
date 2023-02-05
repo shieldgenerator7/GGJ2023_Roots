@@ -1,7 +1,4 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
-using System.Net;
+
 using UnityEngine;
 
 [RequireComponent(typeof(Collider2D))]
@@ -16,6 +13,10 @@ public class Enemy : MonoBehaviour
     public float jumpRange = 2;
     public float jumpPower = 5;
     public float jumpHeightOffset = 4;
+
+    [Range(0f, 100f)]
+    public float DropChance = 25f;
+    public GameObject ItemDrop;
 
     private bool jumped = false;
 
@@ -86,8 +87,15 @@ public class Enemy : MonoBehaviour
         {
             var splat = Instantiate(deathEffect, gameObject.transform.parent);
             splat.transform.position = transform.position;
+
+            var spin = Random.Range(0, 100);
+            if (spin < DropChance)
+            {
+                var item = Instantiate(ItemDrop, gameObject.transform.parent);
+                item.transform.position = gameObject.transform.position;
+            }
         }
         Destroy(gameObject);
-    }
 
+    }
 }
