@@ -97,6 +97,8 @@ GameObject:
   - component: {fileID: 2914735468122471278}
   - component: {fileID: 8561115757649941337}
   - component: {fileID: 1606245409}
+  - component: {fileID: 4288988209451232596}
+  - component: {fileID: 2918255560494127965}
   m_Layer: 7
   m_Name: Tree
   m_TagString: tree
@@ -121,7 +123,7 @@ Transform:
   - {fileID: 1565085794116899829}
   - {fileID: 8640498386487677003}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!50 &2386945949090215557
 Rigidbody2D:
@@ -236,6 +238,34 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.25868767, y: 1.1874583}
   m_EdgeRadius: 0
+--- !u!114 &4288988209451232596
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 619980683536130552}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4579811f3ef9dcf43919f5e62f208a49, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tree: {fileID: 8561115757649941337}
+  duration: 0
+  sceneChange: {fileID: 2918255560494127965}
+  scene: 3
+--- !u!114 &2918255560494127965
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 619980683536130552}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b5327a748356c4782bd53e6f9f4c0a92, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &821018291903013510
 GameObject:
   m_ObjectHideFlags: 0
