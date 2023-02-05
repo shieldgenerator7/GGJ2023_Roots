@@ -68,7 +68,7 @@ Transform:
   - {fileID: 2306693783991847015}
   - {fileID: 1902112605344678060}
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &4330231387902035760
 SpriteRenderer:
@@ -145,9 +145,9 @@ Rigidbody2D:
   m_ExcludeLayers:
     serializedVersion: 2
     m_Bits: 0
-  m_Interpolate: 0
+  m_Interpolate: 1
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 4
 --- !u!70 &4330231387902035766
 CapsuleCollider2D:
@@ -219,7 +219,6 @@ MonoBehaviour:
     ability1: 0
     ability2: 0
     formIndex: 0
-  jumpClip: {fileID: 8300000, guid: 2892d3525b3183545a252674b1c8da7a, type: 3}
 --- !u!114 &4330231387902035764
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -248,7 +247,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spawnBuffer: 1
   launchSpeed: 7
-  gunSound: {fileID: 8300000, guid: 5dde9ac20879a794ab063d9f5ed774f2, type: 3}
   maxAmmo: 50
   startingAmmo: 25
   bulletPrefab: {fileID: 5989810841197289092, guid: ca814b910e78b0b47bd9d43a4012a43d, type: 3}

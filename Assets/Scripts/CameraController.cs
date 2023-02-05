@@ -12,6 +12,10 @@ public class CameraController : MonoBehaviour
     public float maxDistance = 10;
     public float groundDetectOffset = 1;
 
+    private float prevY = float.MinValue;
+    private float curY = 0;
+    private float prevDistance = 0;
+
     private Vector3 offset;
     private ContactFilter2D filter;
     Camera cam;
@@ -24,19 +28,49 @@ public class CameraController : MonoBehaviour
         filter.layerMask = groundLayerMask;
         cam = GetComponent<Camera>();
     }
+    private void Awake()
+    {
+        prevDistance = getDistance();
+        prevY = curY;
+    }
 
     // Update is called once per frame
     void LateUpdate()
     {
 
         //zoom in zoom out
+        float distance = getDistance();//updates curY as well
+        //
+        float percent = getPercent(distance);
+        if (prevY != curY)
+        {
+            float prevPercent = getPercent(prevDistance);
+            percent = Mathf.Lerp(prevPercent, percent, Time.deltaTime);
+            prevY =  Mathf.Lerp(prevY, curY, Time.deltaTime);
+            prevDistance = Mathf.Lerp(prevDistance, distance, Time.deltaTime);
+        }
+        else {
+            prevDistance = distance;
+            prevY = curY;
+        }
+        float ortho = (maxOrthoSize - minOrthoSize) * percent + minOrthoSize;
+        cam.orthographicSize = ortho;
+
+        //position
+        Vector3 percentOffset = (offset * percent);
+        percentOffset.z = offset.z;
+        transform.position = follow.position + percentOffset;
+    }
+
+    float getDistance()
+    {
         //get distance to ground
         RaycastHit2D[] results;
         results = new RaycastHit2D[10];
         int count = Physics2D.Raycast(
-            (Vector2)follow.position + (Vector2.down*groundDetectOffset), 
-            Vector2.down, 
-            filter, 
+            (Vector2)follow.position + (Vector2.down * groundDetectOffset),
+            Vector2.down,
+            filter,
             results
             );
         float distance = float.MaxValue;
@@ -49,17 +83,15 @@ public class CameraController : MonoBehaviour
                 if (dist < distance)
                 {
                     distance = dist;
+                    curY = rch2d.point.y;
                 }
             }
         }
-        //
-        float percent = (distance - minDistance) / (maxDistance - minDistance);
-        float ortho = (maxOrthoSize - minOrthoSize) * percent + minOrthoSize;
-        cam.orthographicSize = ortho;
+        return distance;
+    }
 
-        //position
-        Vector3 percentOffset = (offset * percent);
-        percentOffset.z = offset.z;
-        transform.position = follow.position + percentOffset;
+    float getPercent(float distance)
+    {
+        return (distance - minDistance) / (maxDistance - minDistance);
     }
 }
