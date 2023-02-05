@@ -7,6 +7,13 @@ public class NPC : MonoBehaviour
 {
     public List<AudioClip> voiceLines;
 
+    private bool collected = false;
+    public bool Collected
+    {
+        get => collected;
+        set => collected = value;
+    }
+
     private AudioSource audioSource;
     // Start is called before the first frame update
     void Start()
@@ -16,14 +23,23 @@ public class NPC : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        PlayerController playerController = collision.GetComponent<PlayerController>();
-        if (playerController)
+        if (!collected)
         {
-            if (!audioSource.isPlaying)
+            PlayerController playerController = collision.GetComponent<PlayerController>();
+            if (playerController)
             {
-                audioSource.clip = voiceLines[Random.Range(0, voiceLines.Count)];
-                audioSource.Play();
+                FindObjectOfType<TreeGameObject>().findPerch(this);
+                randomVoiceLine();
             }
+        }
+    }
+
+    public void randomVoiceLine()
+    {
+        if (!audioSource.isPlaying)
+        {
+            audioSource.clip = voiceLines[Random.Range(0, voiceLines.Count)];
+            audioSource.Play();
         }
     }
 }
