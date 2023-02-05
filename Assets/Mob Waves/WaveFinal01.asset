@@ -13,12 +13,12 @@ MonoBehaviour:
   m_Name: WaveFinal01
   m_EditorClassIdentifier: 
   Mobs:
+  - Mob: {fileID: 6133131661770203922, guid: 6e22d0b4b33216544a50fb7329aff773, type: 3}
+    Count: 1
   - Mob: {fileID: 6133131661770203922, guid: 2015371e71597aa4999535c2d4159dab, type: 3}
     Count: 0
   - Mob: {fileID: 6133131661770203922, guid: 87fe87872e7acd64f90f817e4c4d7ea2, type: 3}
     Count: 2
-  - Mob: {fileID: 6133131661770203922, guid: 6e22d0b4b33216544a50fb7329aff773, type: 3}
-    Count: 1
   - Mob: {fileID: 6133131661770203922, guid: 7d29c703a7e9f3c44a302d5497f838aa, type: 3}
     Count: 0
   - Mob: {fileID: 6133131661770203922, guid: 7f39132f98e8eb546b8d64e4ea4050ac, type: 3}
