@@ -347,7 +347,7 @@ MonoBehaviour:
   duration: 0
   keyCode: 27
   sceneChange: {fileID: 86499523}
-  scene: 0
+  scene: 5
 --- !u!114 &86499522
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -365,7 +365,7 @@ MonoBehaviour:
   duration: 9
   keyCode: 13
   sceneChange: {fileID: 86499523}
-  scene: 0
+  scene: 5
 --- !u!114 &86499523
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2198,7 +2198,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1321718335}
   - component: {fileID: 1321718334}
-  - component: {fileID: 1321718337}
   - component: {fileID: 1321718336}
   m_Layer: 0
   m_Name: EvanOpus
@@ -2328,18 +2327,6 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b5327a748356c4782bd53e6f9f4c0a92, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &1321718337
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1321718333}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7a69a761f70c54579b3d1f6560dbdc52, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1358356350
