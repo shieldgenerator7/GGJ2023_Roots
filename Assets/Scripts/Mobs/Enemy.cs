@@ -31,7 +31,7 @@ public class Enemy : MonoBehaviour
     }
 
 
-    private void FixedUpdate()
+    private void Update()
     {
         if (TreeTracker.Instance != null)
         {
