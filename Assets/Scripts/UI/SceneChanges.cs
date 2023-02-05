@@ -4,7 +4,7 @@ using UnityEngine.SceneManagement;
 
 public class SceneChange : MonoBehaviour
 {
-    public void MainScene()
+    public void MainMenuScene()
     {
         SceneManager.LoadScene("MainMenu");
     }
