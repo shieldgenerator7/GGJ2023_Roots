@@ -174,11 +174,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 9
   deathEffect: {fileID: 6214931794963179021, guid: 72ed1a39258f9b742a8db6409a64eb5d, type: 3}
-  strength: 3
+  strength: 30
   jumpRange: 2
   jumpPower: 40
   jumpHeightOffset: 3
-  DropChance: 100
+  DropChance: 25
   ItemDrop: {fileID: 3179023008219385200, guid: 76032cfccd429bf4084aa42e106bc34e, type: 3}
 --- !u!95 &7929287780314474107
 Animator:

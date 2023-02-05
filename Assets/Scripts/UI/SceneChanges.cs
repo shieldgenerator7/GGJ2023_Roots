@@ -19,6 +19,11 @@ public class SceneChange : MonoBehaviour
         SceneManager.LoadScene("PlayScene");
     }
 
+    public void LoseScene()
+    {
+        SceneManager.LoadScene("lose");
+    }
+
     public void WinScene()
     {
         SceneManager.LoadScene("win");
@@ -34,6 +39,7 @@ public class SceneChange : MonoBehaviour
         MainMenu,
         Intro,
         Play,
+        Lose,
         Win,
         Credits,
     }
@@ -50,6 +56,9 @@ public class SceneChange : MonoBehaviour
                 break;
             case Scene.Play:
                 PlayScene();
+                break;
+            case Scene.Lose:
+                LoseScene();
                 break;
             case Scene.Win:
                 WinScene();

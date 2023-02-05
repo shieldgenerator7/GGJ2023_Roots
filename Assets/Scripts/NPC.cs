@@ -32,6 +32,7 @@ public class NPC : MonoBehaviour
     void Start()
     {
         rb2d = GetComponent<Rigidbody2D>();
+        voiceLines.RemoveAll(line => !line);
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -49,6 +50,14 @@ public class NPC : MonoBehaviour
 
     public void randomVoiceLine()
     {
-        SFXContoller.instance.PlaySFX(voiceLines[Random.Range(0, voiceLines.Count)]);
+        AudioClip clip = voiceLines[Random.Range(0, voiceLines.Count)];
+        if (SFXContoller.instance)
+        {
+            SFXContoller.instance.PlaySFX(clip);
+        }
+        else
+        {
+            AudioSource.PlayClipAtPoint(clip, transform.position);
+        }
     }
 }
