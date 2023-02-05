@@ -28,6 +28,7 @@ public class Bullet : MonoBehaviour
                 Destroy(gameObject);
                 break;
             case "Player":
+            case "NPC":
             case "tree":
             case "bullet":
                 //do nothing

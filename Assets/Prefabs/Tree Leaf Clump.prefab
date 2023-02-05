@@ -13,9 +13,10 @@ GameObject:
   - component: {fileID: 2957276394676610567}
   - component: {fileID: 686451994704555309}
   - component: {fileID: 293557203525048339}
+  - component: {fileID: 1129895225638623928}
   m_Layer: 7
   m_Name: Tree Leaf Clump
-  m_TagString: Untagged
+  m_TagString: tree
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -160,3 +161,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   effect: {fileID: 6416247896185223516, guid: a7d344d9081691d448df97cae95fb52e, type: 3}
+--- !u!114 &1129895225638623928
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7662702537930764504}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3b1403b4ffd88ae4caf3a522891ebee7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

@@ -7,6 +7,7 @@ TagManager:
   - tree
   - mob
   - bullet
+  - NPC
   layers:
   - Default
   - TransparentFX
