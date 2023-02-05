@@ -49,13 +49,18 @@ public class Enemy : MonoBehaviour
     {
         if (collision.gameObject.tag == "tree")
         {
-            Debug.Log("hit him!");
-            Destroy(gameObject);
             collision.gameObject.GetComponent<TreeGameObject>().Damage(strength);
+            KillMe();
+            
         }
     }
 
     private void OnDestroy()
+    {
+        TreeTracker.Instance.DeregisterMob(gameObject);
+    }
+
+    public void KillMe()
     {
         //spawn effect
         if (deathEffect != null)
@@ -63,11 +68,6 @@ public class Enemy : MonoBehaviour
             var splat = Instantiate(deathEffect, gameObject.transform.parent);
             splat.transform.position = transform.position;
         }
-        TreeTracker.Instance.DeregisterMob(gameObject);
-    }
-
-    public void KillMe()
-    {
         Destroy(gameObject);
     }
 
