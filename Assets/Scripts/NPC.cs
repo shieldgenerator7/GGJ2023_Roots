@@ -6,6 +6,7 @@ using UnityEngine;
 public class NPC : MonoBehaviour
 {
     public List<AudioClip> voiceLines;
+    public Turret turret;
 
     public Collider2D physicsColl;
 
@@ -19,6 +20,10 @@ public class NPC : MonoBehaviour
             //
             physicsColl.enabled = !collected;
             rb2d.isKinematic = collected;
+            if (turret)
+            {
+                turret.gameObject.SetActive(collected);
+            }
         }
     }
 
