@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 7401960985877712078}
   - component: {fileID: 4397465857171112553}
   - component: {fileID: 2937794789826202816}
+  - component: {fileID: 8485063034604095706}
   m_Layer: 0
   m_Name: sunbeam
   m_TagString: Untagged
@@ -32,7 +33,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: -1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &7401960985877712078
 SpriteRenderer:
@@ -145,3 +146,19 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 2.2392807, y: 5.9114785}
   m_EdgeRadius: 0
+--- !u!114 &8485063034604095706
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7401960985877712079}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 54a51d702ee75e74abc4e35413dde727, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dropDelay: 2
+  dropAmount: 2
+  dropoffset: {x: 0, y: -1}
+  ammoPrefab: {fileID: 3179023008219385200, guid: 76032cfccd429bf4084aa42e106bc34e, type: 3}
