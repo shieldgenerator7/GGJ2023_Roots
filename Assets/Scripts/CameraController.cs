@@ -30,6 +30,10 @@ public class CameraController : MonoBehaviour
     }
     private void Awake()
     {
+        if (!follow)
+        {
+            return;
+        }
         prevDistance = getDistance();
         prevY = curY;
     }
@@ -37,6 +41,10 @@ public class CameraController : MonoBehaviour
     // Update is called once per frame
     void LateUpdate()
     {
+        if (!follow)
+        {
+            return;
+        }
 
         //zoom in zoom out
         float distance = getDistance();//updates curY as well
@@ -46,10 +54,11 @@ public class CameraController : MonoBehaviour
         {
             float prevPercent = getPercent(prevDistance);
             percent = Mathf.Lerp(prevPercent, percent, Time.deltaTime);
-            prevY =  Mathf.Lerp(prevY, curY, Time.deltaTime);
+            prevY = Mathf.Lerp(prevY, curY, Time.deltaTime);
             prevDistance = Mathf.Lerp(prevDistance, distance, Time.deltaTime);
         }
-        else {
+        else
+        {
             prevDistance = distance;
             prevY = curY;
         }
