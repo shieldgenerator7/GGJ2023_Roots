@@ -17,13 +17,13 @@ public class PlayerInput : MonoBehaviour
         inputState.movementDirection.x = Input.GetAxis("Horizontal");
         inputState.movementDirection.y = Input.GetAxis("Vertical");
         //Jump
-        inputState.jump = Input.GetButton("Jump");
+        inputState.jump = Input.GetButton("Jump") || inputState.movementDirection.y > 0;
         //Run
         inputState.run = Input.GetButton("Run");
         //Interact
         inputState.interact = Input.GetButton("Interact");
         //Ability1
-        inputState.ability1 = false;// Input.GetButton("Ability1");
+        inputState.ability1 = Input.GetMouseButton(0);
         //Ability2
         inputState.ability2 = false;// Input.GetButton("Ability2");
         //Look Direction
