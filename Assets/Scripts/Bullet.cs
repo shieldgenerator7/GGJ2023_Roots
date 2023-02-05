@@ -21,7 +21,7 @@ public class Bullet : MonoBehaviour
         switch (collision.gameObject.tag)
         {
             case "mob":
-                Destroy(collision.gameObject);
+                collision.gameObject.GetComponent<Enemy>().KillMe();
                 Destroy(gameObject);
                 break;
             case "Player":

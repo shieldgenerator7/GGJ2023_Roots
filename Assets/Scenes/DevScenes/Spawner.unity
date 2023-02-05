@@ -1384,6 +1384,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1255464536693171834, guid: 4c8f6b1f8c80a9a4a98105a249c12ce3, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1336053140867112069, guid: 4c8f6b1f8c80a9a4a98105a249c12ce3, type: 3}
       propertyPath: m_Name
       value: SpawnTrigger
@@ -1392,6 +1396,18 @@ PrefabInstance:
       propertyPath: waveAnnouce
       value: 
       objectReference: {fileID: 1877604800}
+    - target: {fileID: 5628849592352425043, guid: 4c8f6b1f8c80a9a4a98105a249c12ce3, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6979938403694766667, guid: 4c8f6b1f8c80a9a4a98105a249c12ce3, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6979938403694766667, guid: 4c8f6b1f8c80a9a4a98105a249c12ce3, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -5.25
+      objectReference: {fileID: 0}
     - target: {fileID: 8764260975311014971, guid: 4c8f6b1f8c80a9a4a98105a249c12ce3, type: 3}
       propertyPath: m_RootOrder
       value: 7

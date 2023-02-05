@@ -13,6 +13,7 @@ public class SpawnTrigger : MonoBehaviour
         if(collision.tag == "tree")
         {
             mobSpawner.QueueWave(wave);
+            mobSpawner.gameObject.SetActive(true);
             gameObject.SetActive(false);
         }
     }
