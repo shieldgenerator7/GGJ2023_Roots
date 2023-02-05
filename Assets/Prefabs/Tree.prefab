@@ -121,7 +121,7 @@ Transform:
   - {fileID: 1565085794116899829}
   - {fileID: 8640498386487677003}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!50 &2386945949090215557
 Rigidbody2D:
@@ -277,6 +277,7 @@ GameObject:
   m_Component:
   - component: {fileID: 75652254879974590}
   - component: {fileID: 6895465033514531994}
+  - component: {fileID: 2868415998687330777}
   m_Layer: 0
   m_Name: face10
   m_TagString: Untagged
@@ -351,6 +352,22 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &2868415998687330777
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2305375511934885002}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2c8d79088fb09f64eba1eb5ed35a1c74, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  defaultFace: {fileID: -1533314262, guid: 1e902307dc491464f9fa6eef0adb0c0a, type: 3}
+  painFace: {fileID: -786270256, guid: 1e902307dc491464f9fa6eef0adb0c0a, type: 3}
+  excitedFace: {fileID: 1920771168, guid: 1e902307dc491464f9fa6eef0adb0c0a, type: 3}
+  faceDuration: 3
 --- !u!1 &3665655535865328837
 GameObject:
   m_ObjectHideFlags: 0
