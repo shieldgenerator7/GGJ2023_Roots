@@ -1078,10 +1078,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: tree_branch
       objectReference: {fileID: 0}
-    - target: {fileID: 5798360501921302742, guid: 937f5d37c8fc2164f92ac94d6eddf4c6, type: 3}
-      propertyPath: m_TagString
-      value: Untagged
-      objectReference: {fileID: 0}
     - target: {fileID: 5909645987014977603, guid: 937f5d37c8fc2164f92ac94d6eddf4c6, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -1341,10 +1337,6 @@ PrefabInstance:
     - target: {fileID: 5798360501921302742, guid: 937f5d37c8fc2164f92ac94d6eddf4c6, type: 3}
       propertyPath: m_Name
       value: tree_branch (1)
-      objectReference: {fileID: 0}
-    - target: {fileID: 5798360501921302742, guid: 937f5d37c8fc2164f92ac94d6eddf4c6, type: 3}
-      propertyPath: m_TagString
-      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 8823369544293838033, guid: 937f5d37c8fc2164f92ac94d6eddf4c6, type: 3}
       propertyPath: m_RootOrder
