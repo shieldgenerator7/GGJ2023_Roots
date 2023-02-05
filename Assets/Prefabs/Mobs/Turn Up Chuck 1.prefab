@@ -29,7 +29,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6133131661770203922}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.9942786, y: -0.62092, z: -9.964832}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1.5, y: 1.5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -178,6 +178,8 @@ MonoBehaviour:
   jumpRange: 2
   jumpPower: 40
   jumpHeightOffset: 3
+  DropChance: 100
+  ItemDrop: {fileID: 3179023008219385200, guid: 76032cfccd429bf4084aa42e106bc34e, type: 3}
 --- !u!95 &7929287780314474107
 Animator:
   serializedVersion: 5

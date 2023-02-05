@@ -37,7 +37,6 @@ public class MobSpawner : MonoBehaviour
             {
                 currentTime += Time.deltaTime;
                 var x = Mathf.Lerp(0, 1, currentTime / 2f);
-                Debug.Log(x);
                 transform.localScale = new Vector3(x, 1, 1);
             }
             else
@@ -69,7 +68,6 @@ public class MobSpawner : MonoBehaviour
             {
                 currentTime += Time.deltaTime;
                 var x = Mathf.Lerp(1, 0, currentTime / 1f);
-                Debug.Log(x);
                 transform.localScale = new Vector3(x, 1, 1);
             }
         }

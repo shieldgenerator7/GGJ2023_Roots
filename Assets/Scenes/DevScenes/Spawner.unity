@@ -418,6 +418,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4330231387902035761, guid: e76f119d9c5c522479908e7e2db583a7, type: 3}
   m_PrefabInstance: {fileID: 4330231387365431852}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &537664798 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5689446135096773365, guid: e76f119d9c5c522479908e7e2db583a7, type: 3}
+  m_PrefabInstance: {fileID: 4330231387365431852}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f76e61e71625fac4dae90e9a7fc4f50a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &722914752
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -484,15 +495,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5385257659384942839, guid: 7d34f8cf9a50a1f45a7c0120b552ea70, type: 3}
       propertyPath: m_BackGroundColor.b
-      value: 0.764151
+      value: 0.01886791
       objectReference: {fileID: 0}
     - target: {fileID: 5385257659384942839, guid: 7d34f8cf9a50a1f45a7c0120b552ea70, type: 3}
       propertyPath: m_BackGroundColor.g
-      value: 0.7488939
+      value: 0.01841383
       objectReference: {fileID: 0}
     - target: {fileID: 5385257659384942839, guid: 7d34f8cf9a50a1f45a7c0120b552ea70, type: 3}
       propertyPath: m_BackGroundColor.r
-      value: 0.378471
+      value: 0.0077429633
       objectReference: {fileID: 0}
     - target: {fileID: 5385257660151716992, guid: 7d34f8cf9a50a1f45a7c0120b552ea70, type: 3}
       propertyPath: m_IsActive
@@ -717,6 +728,7 @@ MonoBehaviour:
   playerInput: {fileID: 1385253468}
   playerController: {fileID: 537664793}
   playerMover: {fileID: 537664792}
+  playerShooter: {fileID: 537664798}
 --- !u!114 &1385253471
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1272,6 +1284,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4330231387902035771, guid: e76f119d9c5c522479908e7e2db583a7, type: 3}
       propertyPath: m_Name
+      value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 4330231387902035771, guid: e76f119d9c5c522479908e7e2db583a7, type: 3}
+      propertyPath: m_TagString
       value: Player
       objectReference: {fileID: 0}
     m_RemovedComponents: []
