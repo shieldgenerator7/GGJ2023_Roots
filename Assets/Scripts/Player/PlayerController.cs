@@ -63,7 +63,6 @@ public class PlayerController : MonoBehaviour
         {
             if (!playerState.jumping && inputState.jump)
             {
-                SFXContoller.instance?.PlaySFX(jumpClip);
                 if (inputState.movementDirection.y < 0)
                 {
                     if (standingColl2D?.GetComponent<PlatformEffector2D>())
@@ -89,6 +88,7 @@ public class PlayerController : MonoBehaviour
                     && !playerState.jumpConsumed
                 )
                 {
+                    SFXContoller.instance?.PlaySFX(jumpClip);
                     playerState.jumping = true;
                     playerState.jumpConsumed = true;
                     playerState.jumpConsumedThisFrame = true;

@@ -12,7 +12,7 @@ PlayerSettings:
   targetDevice: 2
   useOnDemandResources: 0
   accelerometerFrequency: 60
-  companyName: Manadrake
+  companyName: Mandrake
   productName: The Great Mana Tree
   defaultCursor: {fileID: 0}
   cursorHotspot: {x: 0, y: 0}
@@ -134,8 +134,7 @@ PlayerSettings:
   vulkanEnableCommandBufferRecycling: 1
   loadStoreDebugModeEnabled: 0
   bundleVersion: 0.001
-  preloadedAssets:
-  - {fileID: 11400000, guid: a24f513a273ec654291aa7023fe9d0cc, type: 2}
+  preloadedAssets: []
   metroInputSource: 0
   wsaTransparentSwapchain: 0
   m_HolographicPauseOnTrackingLoss: 1
@@ -274,7 +273,7 @@ PlayerSettings:
   - m_BuildTarget: 
     m_Icons:
     - serializedVersion: 2
-      m_Icon: {fileID: 2800000, guid: 2214473e22390ae4682be140bb12ef97, type: 3}
+      m_Icon: {fileID: 2800000, guid: 026c16b567449e041bd190b27be47c4a, type: 3}
       m_Width: 128
       m_Height: 128
       m_Kind: 0
