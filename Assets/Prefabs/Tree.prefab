@@ -188,6 +188,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 1
+  slowPercent: 0.1
   track: {fileID: 0}
 --- !u!61 &1606245409
 BoxCollider2D:
